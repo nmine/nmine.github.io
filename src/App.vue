@@ -15,32 +15,32 @@
           width="70"
         />
 
-        
+
       </div>
 
       <v-spacer></v-spacer>
 
-      
+
     </v-app-bar>
 
     <v-main>
-      <coach-catalogue/>
+      <create-project-stepper/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import CoachCatalogue from './components/CoachCatalogue.vue';
+import CreateProjectStepper from "./components/creationProject/CreateProjectStepper";
 
 export default {
   name: 'App',
 
   components: {
-    CoachCatalogue
+    CreateProjectStepper,
   },
 
   data: () => ({
-   
+
   }),
 };
 </script>

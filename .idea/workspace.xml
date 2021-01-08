@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a352a796-daf2-46f8-bbec-9139837b2eee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue.config.js" afterDir="false" />
     </list>
@@ -46,7 +45,7 @@
       <recent name="$PROJECT_DIR$/src/components/creationProject" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.serve">
+  <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -84,7 +83,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608801934116</updated>
-      <workItem from="1610114197015" duration="7523000" />
+      <workItem from="1610114197015" duration="7754000" />
     </task>
     <task id="LOCAL-00001" summary="catalogue">
       <created>1610116484561</created>
@@ -100,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610142053790</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add deployable site">
+      <created>1610142657915</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610142657915</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,37 +128,38 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="catalogue" />
     <MESSAGE value="sesion selection + trainee" />
-    <option name="LAST_COMMIT_MESSAGE" value="sesion selection + trainee" />
+    <MESSAGE value="add deployable site" />
+    <option name="LAST_COMMIT_MESSAGE" value="add deployable site" />
   </component>
   <component name="WindowStateProjectService">
     <state x="304" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610118351967">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="304" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1610118351967" />
-    <state x="416" y="137" key="CommitChangelistDialog2" timestamp="1610142053628">
+    <state x="416" y="137" key="CommitChangelistDialog2" timestamp="1610142790556">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="416" y="137" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1610142053628" />
-    <state width="1638" height="280" key="GridCell.Tab.0.bottom" timestamp="1610118637205">
+    <state x="416" y="137" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1610142790556" />
+    <state width="1638" height="280" key="GridCell.Tab.0.bottom" timestamp="1610142763670">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="280" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1610118637205" />
-    <state width="1638" height="280" key="GridCell.Tab.0.center" timestamp="1610118637204">
+    <state width="1638" height="280" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1610142763670" />
+    <state width="1638" height="280" key="GridCell.Tab.0.center" timestamp="1610142763669">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="280" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1610118637204" />
-    <state width="1638" height="280" key="GridCell.Tab.0.left" timestamp="1610118637204">
+    <state width="1638" height="280" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1610142763669" />
+    <state width="1638" height="280" key="GridCell.Tab.0.left" timestamp="1610142763669">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="280" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1610118637204" />
-    <state width="1638" height="280" key="GridCell.Tab.0.right" timestamp="1610118637205">
+    <state width="1638" height="280" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1610142763669" />
+    <state width="1638" height="280" key="GridCell.Tab.0.right" timestamp="1610142763669">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="280" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1610118637204" />
-    <state x="440" y="276" key="Vcs.Push.Dialog.v2" timestamp="1610142055403">
+    <state width="1638" height="280" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1610142763669" />
+    <state x="440" y="276" key="Vcs.Push.Dialog.v2" timestamp="1610142659789">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="440" y="276" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1610142055403" />
+    <state x="440" y="276" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1610142659789" />
     <state x="582" y="388" key="cloudConfig.PluginsDialog" timestamp="1610114235155">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>

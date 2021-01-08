@@ -1,10 +1,48 @@
 <template>
   <v-container fluid class="grey lighten-5">
     <v-row no-gutters>
-      <v-col :key="1" cols="12" lg="2">
-        <v-card class="pa-2" outlined tile> One of three columns </v-card>
-      </v-col>
-      <v-col :key="2" cols="12" lg="10">
+      <v-col :key="2" cols="12" lg="12">
+        <v-row>
+          <v-col cols="3">
+            <v-card class="mx-auto pa-3">
+              <v-card-title>Language</v-card-title>
+              <v-checkbox
+                v-model="ex4"
+                label="French"
+                value="red"
+                hide-details
+              ></v-checkbox>
+              <v-checkbox
+                v-model="ex4"
+                label="English"
+                value="red darken-3"
+                hide-details
+              ></v-checkbox>
+            </v-card>
+          </v-col>
+          <v-col cols="3">
+            <v-card class="mx-auto pa-5">
+              <v-select
+                v-model="value"
+                :items="items"
+                attach
+                chips
+                label="Specialities"
+                multiple
+              ></v-select></v-card
+          ></v-col>
+          <v-col cols="3"
+            ><v-card class="mx-auto pa-5">
+              <v-select
+                v-model="value"
+                :items="items"
+                attach
+                chips
+                label="Certification"
+                multiple
+              ></v-select></v-card
+          ></v-col>
+        </v-row>
         <v-row>
           <v-col cols="4">
             <v-card class="mx-auto" max-width="344">
@@ -30,7 +68,7 @@
               </v-card-actions>
             </v-card>
           </v-col>
-          <v-col>
+          <v-col cols="4">
             <v-card class="mx-auto" max-width="344">
               <v-img
                 src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
@@ -54,7 +92,7 @@
               </v-card-actions>
             </v-card>
           </v-col>
-          <v-col>
+          <v-col cols="4">
             <v-card class="mx-auto" max-width="344">
               <v-img
                 src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
@@ -174,6 +212,22 @@ export default {
     show2: true,
     show3: false,
     show4: false,
+    ex4: [
+      "red",
+      "indigo",
+      "orange",
+      "primary",
+      "secondary",
+      "success",
+      "info",
+      "warning",
+      "error",
+      "red darken-3",
+      "indigo darken-3",
+      "orange darken-3",
+    ],
+    items: ["foo", "bar", "fizz", "buzz"],
+    value: ["foo", "bar", "fizz", "buzz"],
     password: "Password",
     rules: {
       required: (value) => !!value || "Required.",

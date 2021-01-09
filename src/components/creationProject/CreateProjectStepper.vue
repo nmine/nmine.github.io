@@ -478,6 +478,20 @@
                                                             label="Protein (g)"
                                                     ></v-text-field>
                                                 </v-col>
+                                                <v-col
+                                                        cols="12"
+                                                        sm="6"
+                                                        md="4"
+                                                >
+                                                    <v-select
+                                                            v-model="value"
+                                                            :items="items"
+                                                            attach
+                                                            chips
+                                                            label="Specialities"
+                                                            multiple
+                                                    ></v-select>
+                                                </v-col>
                                             </v-row>
                                         </v-container>
                                     </v-card-text>
@@ -562,15 +576,13 @@
             dialog: false,
             dialogDelete: false,
             headers: [
-                {
-                    text: 'FirstName',
-                    align: 'start',
-                    value: 'name',
-                },
+                {text: 'FirstName', align: 'start', value: 'name'},
                 {text: 'LastName', value: 'calories'},
-                {text: 'Fat (g)', value: 'fat'},
-                {text: 'Carbs (g)', value: 'carbs'},
-                {text: 'Protein (g)', value: 'protein'},
+                {text: 'Language', value: 'fat'},
+                {text: 'Email', value: 'carbs'},
+                {text: 'Credit', value: 'protein'},
+                {text: 'Dates begin/end', value: 'dates'},
+                { text: 'Gluten-Free', value: 'sponsors' },
                 {text: 'Actions', value: 'actions', sortable: false},
             ],
             desserts: [],
@@ -618,72 +630,95 @@
                     {
                         name: 'Nicolas',
                         calories: 'Lulu',
-                        fat: 6.0,
-                        carbs: 24,
-                        protein: 4.0,
+                        fat: 'FR',
+                        carbs: 'toto@gmail.com',
+                        protein: 5,
+                        sponsors: ["foo", "bar", "fizz", "buzz"],
+                        glutenfree: true,
+                        dates: '05/01/21 - 05/03/21'
                     },
                     {
                         name: 'Nicia',
                         calories: 'Mine',
-                        fat: 9.0,
-                        carbs: 37,
-                        protein: 4.3,
+                        fat: 'NL',
+                        carbs: 'toto@gmail.com',
+                        protein: 5,
+                        sponsors: ["foo", "bar", "fizz", "buzz"],
+                        glutenfree: true,
+                        dates: '05/01/21 - 05/03/21'
                     },
                     {
                         name: 'Cosma',
                         calories: 'Mine',
-                        fat: 16.0,
-                        carbs: 23,
-                        protein: 6.0,
+                        fat: 'EN',
+                        carbs: 'toto@gmail.com',
+                        protein: 5,
+                        sponsors: ["foo", "bar", "fizz", "buzz"],
+                        glutenfree: true,
+                        dates: '05/01/21 - 05/03/21'
                     },
                     {
                         name: 'Janey',
                         calories: 'Mine',
-                        fat: 3.7,
-                        carbs: 67,
-                        protein: 4.3,
+                        fat: 'FR',
+                        carbs: 'toto@gmail.com',
+                        protein: 5,
+                        sponsors: ["foo", "bar", "fizz", "buzz"],
+                        dates: '05/01/21 - 05/03/21'
                     },
                     {
                         name: 'Nicolette',
                         calories: 'Dupond',
-                        fat: 16.0,
-                        carbs: 49,
-                        protein: 3.9,
+                        fat: 'EN',
+                        carbs: 'toto@gmail.com',
+                        protein: 5,
+                        sponsors: ["foo", "bar", "fizz", "buzz"],
+                        dates: '05/01/21 - 05/03/21'
                     },
                     {
                         name: 'Gary',
                         calories: 'Lele',
-                        fat: 0.0,
-                        carbs: 94,
-                        protein: 0.0,
+                        fat: 'EN',
+                        carbs: 'toto@gmail.com',
+                        protein: 5,
+                        sponsors: ["foo", "bar", "fizz", "buzz"],
+                        dates: '05/01/21 - 05/03/21'
                     },
                     {
                         name: 'Edward mm',
                         calories: 'Lele',
-                        fat: 0.2,
-                        carbs: 98,
-                        protein: 0,
+                        fat: 'EN',
+                        carbs: 'toto@gmail.com',
+                        protein: 5,
+                        sponsors: ["foo", "bar", "fizz", "buzz"],
+                        dates: '05/01/21 - 05/03/21'
                     },
                     {
                         name: 'Tyr',
                         calories: 'Mine',
-                        fat: 3.2,
-                        carbs: 87,
-                        protein: 6.5,
+                        fat: 'EN',
+                        carbs: 'toto@gmail.com',
+                        protein: 5,
+                        sponsors: ["foo", "bar", "fizz", "buzz"],
+                        dates: '05/01/21 - 05/03/21'
                     },
                     {
                         name: 'Christina',
                         calories: 'Christina',
-                        fat: 25.0,
-                        carbs: 51,
-                        protein: 4.9,
+                        fat: 'EN',
+                        carbs: 'toto@gmail.com',
+                        protein: 5,
+                        sponsors: ["foo", "bar", "fizz", "buzz"],
+                        dates: '05/01/21 - 05/03/21'
                     },
                     {
                         name: 'Donalda',
                         calories: 'Mine',
-                        fat: 26.0,
-                        carbs: 65,
-                        protein: 7,
+                        fat: 'EN',
+                        carbs: 'toto@gmail.com',
+                        protein: 5,
+                        sponsors: ["foo", "bar", "fizz", "buzz"],
+                        dates: '05/01/21 - 05/03/21'
                     },
                 ]
             },

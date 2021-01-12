@@ -83,7 +83,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608801934116</updated>
-      <workItem from="1610114197015" duration="15897000" />
+      <workItem from="1610114197015" duration="17027000" />
     </task>
     <task id="LOCAL-00001" summary="catalogue">
       <created>1610116484561</created>
@@ -127,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610274956442</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add expanded panel in trainee for sponsors">
+      <created>1610468039741</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1610468039741</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,17 +158,18 @@
     <MESSAGE value="sesion selection + trainee" />
     <MESSAGE value="add deployable site" />
     <MESSAGE value="trainee creation/edition" />
-    <option name="LAST_COMMIT_MESSAGE" value="trainee creation/edition" />
+    <MESSAGE value="add expanded panel in trainee for sponsors" />
+    <option name="LAST_COMMIT_MESSAGE" value="add expanded panel in trainee for sponsors" />
   </component>
   <component name="WindowStateProjectService">
     <state x="304" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610118351967">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="304" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1610118351967" />
-    <state x="416" y="137" key="CommitChangelistDialog2" timestamp="1610274955861">
+    <state x="416" y="137" key="CommitChangelistDialog2" timestamp="1610468039599">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="416" y="137" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1610274955861" />
+    <state x="416" y="137" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1610468039599" />
     <state width="1638" height="280" key="GridCell.Tab.0.bottom" timestamp="1610274872173">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -178,10 +186,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1638" height="280" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1610274872172" />
-    <state x="440" y="276" key="Vcs.Push.Dialog.v2" timestamp="1610274958205">
+    <state x="440" y="276" key="Vcs.Push.Dialog.v2" timestamp="1610468041369">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="440" y="276" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1610274958205" />
+    <state x="440" y="276" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1610468041369" />
     <state x="582" y="388" key="cloudConfig.PluginsDialog" timestamp="1610114235155">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>

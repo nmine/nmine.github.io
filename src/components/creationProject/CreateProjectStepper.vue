@@ -408,9 +408,24 @@
                                                     :headers="headersSponsors"
                                                     :items="item.sponsors"
                                                     class="elevation-3"
+                                                    :hide-default-footer="true"
                                             >
+                                                <template v-slot:item.actions="{ item }">
+                                                    <v-icon
+                                                            small
+                                                            class="mr-2"
+                                                            @click="editItem(item)"
+                                                    >
+                                                        mdi-pencil
+                                                    </v-icon>
+                                                    <v-icon
+                                                            small
+                                                            @click="deleteItem(item)"
+                                                    >
+                                                        mdi-delete
+                                                    </v-icon>
+                                                </template>
                                             </v-data-table>
-                                            More info about {{ item.name }}
                                         </td>
                                     </template>
                                     <template v-slot:top>
@@ -777,7 +792,7 @@
         name: 'CreateProjectStepper',
 
         data: () => ({
-            singleExpand: true,
+            singleExpand: false,
             expanded: [],
             e1: 1,
             items: ["foo", "bar", "fizz", "buzz"],
@@ -791,7 +806,6 @@
                 {text: 'Email', value: 'carbs'},
                 {text: 'Credit', value: 'protein'},
                 {text: 'Dates begin/end', value: 'dates'},
-                {text: 'Sponsor(s)', value: 'sponsors'},
                 {text: 'Actions', value: 'actions', sortable: false},
                 {text: '', value: 'data-table-expand'}
             ],
@@ -799,7 +813,8 @@
                 {text: 'FirstName', align: 'start', value: 'name'},
                 {text: 'LastName', value: 'calories'},
                 {text: 'Language', value: 'fat'},
-                {text: 'Email', value: 'carbs'},
+                {text: 'Email', value: 'email'},
+                {text: 'Roles', value: 'role'},
                 {text: 'Actions', value: 'actions', sortable: false}
             ],
             headersIDP: [
@@ -861,17 +876,23 @@
                             {
                                 name: 'Nicolas',
                                 calories: 'sd',
-                                fat: 'FR'
+                                fat: 'FR',
+                                email: '@gmail.com',
+                                role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
                                 calories: 'qsds',
+                                email: '@gmail.com',
                                 fat: 'FR',
+                                role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
                                 calories: 'dqs',
-                                fat: 'FR'
+                                email: '@gmail.com',
+                                fat: 'FR',
+                                role: 'N+1'
                             }],
                         category: 'sponsor',
                         dates: '05/01/21 - 05/03/21'
@@ -886,17 +907,23 @@
                             {
                                 name: 'Nicolas',
                                 calories: 'sd',
-                                fat: 'FR'
-                            },
-                            {
-                                name: 'Nicolsas',
-                                calories: 'qsds',
                                 fat: 'FR',
+                                email: '@gmail.com',
+                                role: 'N+1'
                             },
                             {
-                                name: 'Nicoslas',
+                                name: 'Nicolas',
+                                calories: 'qsds',
+                                email: '@gmail.com',
+                                fat: 'FR',
+                                role: 'N+1'
+                            },
+                            {
+                                name: 'Nicolas',
                                 calories: 'dqs',
-                                fat: 'FR'
+                                email: '@gmail.com',
+                                fat: 'FR',
+                                role: 'N+1'
                             }],
                         category: 'sponsor',
                         dates: '05/01/21 - 05/03/21'
@@ -911,17 +938,23 @@
                             {
                                 name: 'Nicolas',
                                 calories: 'sd',
-                                fat: 'FR'
+                                fat: 'FR',
+                                email: '@gmail.com',
+                                role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
                                 calories: 'qsds',
+                                email: '@gmail.com',
                                 fat: 'FR',
+                                role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
                                 calories: 'dqs',
-                                fat: 'FR'
+                                email: '@gmail.com',
+                                fat: 'FR',
+                                role: 'N+1'
                             }],
                         category: 'trainee',
                         dates: '05/01/21 - 05/03/21'
@@ -936,17 +969,23 @@
                             {
                                 name: 'Nicolas',
                                 calories: 'sd',
-                                fat: 'FR'
+                                fat: 'FR',
+                                email: '@gmail.com',
+                                role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
                                 calories: 'qsds',
+                                email: '@gmail.com',
                                 fat: 'FR',
+                                role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
                                 calories: 'dqs',
-                                fat: 'FR'
+                                email: '@gmail.com',
+                                fat: 'FR',
+                                role: 'N+1'
                             }],
                         category: 'trainee',
                         dates: '05/01/21 - 05/03/21'
@@ -961,17 +1000,23 @@
                             {
                                 name: 'Nicolas',
                                 calories: 'sd',
-                                fat: 'FR'
+                                fat: 'FR',
+                                email: '@gmail.com',
+                                role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
                                 calories: 'qsds',
+                                email: '@gmail.com',
                                 fat: 'FR',
+                                role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
                                 calories: 'dqs',
-                                fat: 'FR'
+                                email: '@gmail.com',
+                                fat: 'FR',
+                                role: 'N+1'
                             }],
                         category: 'trainee',
                         dates: '05/01/21 - 05/03/21'
@@ -986,17 +1031,23 @@
                             {
                                 name: 'Nicolas',
                                 calories: 'sd',
-                                fat: 'FR'
+                                fat: 'FR',
+                                email: '@gmail.com',
+                                role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
                                 calories: 'qsds',
+                                email: '@gmail.com',
                                 fat: 'FR',
+                                role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
                                 calories: 'dqs',
-                                fat: 'FR'
+                                email: '@gmail.com',
+                                fat: 'FR',
+                                role: 'N+1'
                             }],
                         category: 'trainee',
                         dates: '05/01/21 - 05/03/21'
@@ -1011,17 +1062,23 @@
                             {
                                 name: 'Nicolas',
                                 calories: 'sd',
-                                fat: 'FR'
+                                fat: 'FR',
+                                email: '@gmail.com',
+                                role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
                                 calories: 'qsds',
+                                email: '@gmail.com',
                                 fat: 'FR',
+                                role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
                                 calories: 'dqs',
-                                fat: 'FR'
+                                email: '@gmail.com',
+                                fat: 'FR',
+                                role: 'N+1'
                             }],
                         category: 'trainee',
                         dates: '05/01/21 - 05/03/21'
@@ -1036,17 +1093,23 @@
                             {
                                 name: 'Nicolas',
                                 calories: 'sd',
-                                fat: 'FR'
+                                fat: 'FR',
+                                email: '@gmail.com',
+                                role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
                                 calories: 'qsds',
+                                email: '@gmail.com',
                                 fat: 'FR',
+                                role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
                                 calories: 'dqs',
-                                fat: 'FR'
+                                email: '@gmail.com',
+                                fat: 'FR',
+                                role: 'N+1'
                             }],
                         category: 'trainee',
                         dates: '05/01/21 - 05/03/21'
@@ -1061,17 +1124,23 @@
                             {
                                 name: 'Nicolas',
                                 calories: 'sd',
-                                fat: 'FR'
+                                fat: 'FR',
+                                email: '@gmail.com',
+                                role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
                                 calories: 'qsds',
+                                email: '@gmail.com',
                                 fat: 'FR',
+                                role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
                                 calories: 'dqs',
-                                fat: 'FR'
+                                email: '@gmail.com',
+                                fat: 'FR',
+                                role: 'N+1'
                             }],
                         category: 'trainee',
                         dates: '05/01/21 - 05/03/21'
@@ -1086,17 +1155,23 @@
                             {
                                 name: 'Nicolas',
                                 calories: 'sd',
-                                fat: 'FR'
+                                fat: 'FR',
+                                email: '@gmail.com',
+                                role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
                                 calories: 'qsds',
+                                email: '@gmail.com',
                                 fat: 'FR',
+                                role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
                                 calories: 'dqs',
-                                fat: 'FR'
+                                email: '@gmail.com',
+                                fat: 'FR',
+                                role: 'N+1'
                             }],
                         category: 'trainee',
                         dates: '05/01/21 - 05/03/21'

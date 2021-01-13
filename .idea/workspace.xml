@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a352a796-daf2-46f8-bbec-9139837b2eee" name="Default Changelist" comment="">
+    <list default="true" id="a352a796-daf2-46f8-bbec-9139837b2eee" name="Default Changelist" comment="deploy github page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/creationProject/CreateProjectStepper.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/creationProject/CreateProjectStepper.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +46,7 @@
       <recent name="$PROJECT_DIR$/src/components/creationProject" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.serve">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -83,7 +84,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608801934116</updated>
-      <workItem from="1610114197015" duration="17027000" />
+      <workItem from="1610114197015" duration="18051000" />
+      <workItem from="1610553220553" duration="391000" />
     </task>
     <task id="LOCAL-00001" summary="catalogue">
       <created>1610116484561</created>
@@ -134,7 +136,28 @@
       <option name="project" value="LOCAL" />
       <updated>1610468039741</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add expanded panel in trainee for sponsors">
+      <created>1610469150481</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1610469150481</updated>
+    </task>
+    <task id="LOCAL-00009" summary="deploy github page">
+      <created>1610469209902</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1610469209902</updated>
+    </task>
+    <task id="LOCAL-00010" summary="deploy github page">
+      <created>1610469603507</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1610469603507</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,37 +182,38 @@
     <MESSAGE value="add deployable site" />
     <MESSAGE value="trainee creation/edition" />
     <MESSAGE value="add expanded panel in trainee for sponsors" />
-    <option name="LAST_COMMIT_MESSAGE" value="add expanded panel in trainee for sponsors" />
+    <MESSAGE value="deploy github page" />
+    <option name="LAST_COMMIT_MESSAGE" value="deploy github page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="304" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610118351967">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="304" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1610118351967" />
-    <state x="416" y="137" key="CommitChangelistDialog2" timestamp="1610468039599">
+    <state x="416" y="137" key="CommitChangelistDialog2" timestamp="1610469603334">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="416" y="137" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1610468039599" />
-    <state width="1638" height="280" key="GridCell.Tab.0.bottom" timestamp="1610274872173">
+    <state x="416" y="137" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1610469603334" />
+    <state width="1638" height="280" key="GridCell.Tab.0.bottom" timestamp="1610553357260">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="280" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1610274872173" />
-    <state width="1638" height="280" key="GridCell.Tab.0.center" timestamp="1610274872172">
+    <state width="1638" height="280" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1610553357260" />
+    <state width="1638" height="280" key="GridCell.Tab.0.center" timestamp="1610553357259">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="280" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1610274872172" />
-    <state width="1638" height="280" key="GridCell.Tab.0.left" timestamp="1610274872171">
+    <state width="1638" height="280" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1610553357259" />
+    <state width="1638" height="280" key="GridCell.Tab.0.left" timestamp="1610553357259">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="280" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1610274872171" />
-    <state width="1638" height="280" key="GridCell.Tab.0.right" timestamp="1610274872172">
+    <state width="1638" height="280" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1610553357259" />
+    <state width="1638" height="280" key="GridCell.Tab.0.right" timestamp="1610553357260">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="280" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1610274872172" />
-    <state x="440" y="276" key="Vcs.Push.Dialog.v2" timestamp="1610468041369">
+    <state width="1638" height="280" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1610553357260" />
+    <state x="440" y="276" key="Vcs.Push.Dialog.v2" timestamp="1610469605425">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="440" y="276" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1610468041369" />
+    <state x="440" y="276" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1610469605425" />
     <state x="582" y="388" key="cloudConfig.PluginsDialog" timestamp="1610114235155">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -198,10 +222,14 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="100" y="123" width="1480" height="827" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1610188042101" />
-    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1610118280943">
+    <state x="421" y="124" width="837" height="825" key="find.popup" timestamp="1610553605927">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1610118280943" />
+    <state x="421" y="124" width="837" height="825" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1610553605927" />
+    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1610553459987">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1610553459987" />
   </component>
   <component name="masterDetails">
     <states>

@@ -397,9 +397,10 @@
                                 <v-data-table
                                         :headers="headers"
                                         :items="desserts"
-                                        sort-by="calories"
+                                        sort-by="lastName"
                                         :single-expand="singleExpand"
                                         class="elevation-1"
+                                        item-key="name"
                                         show-expand
                                 >
                                     <template v-slot:expanded-item="{ headers, item }">
@@ -478,8 +479,8 @@
                                                                         md="4"
                                                                 >
                                                                     <v-text-field
-                                                                            v-model="editedItem.calories"
-                                                                            label="Calories"
+                                                                            v-model="editedItem.lastName"
+                                                                            label="lastName"
                                                                     ></v-text-field>
                                                                 </v-col>
                                                                 <v-col
@@ -488,8 +489,8 @@
                                                                         md="4"
                                                                 >
                                                                     <v-text-field
-                                                                            v-model="editedItem.fat"
-                                                                            label="Fat (g)"
+                                                                            v-model="editedItem.language"
+                                                                            label="language (g)"
                                                                     ></v-text-field>
                                                                 </v-col>
                                                                 <v-col
@@ -498,8 +499,8 @@
                                                                         md="4"
                                                                 >
                                                                     <v-text-field
-                                                                            v-model="editedItem.carbs"
-                                                                            label="Carbs (g)"
+                                                                            v-model="editedItem.email"
+                                                                            label="email (g)"
                                                                     ></v-text-field>
                                                                 </v-col>
                                                                 <v-col
@@ -508,8 +509,8 @@
                                                                         md="4"
                                                                 >
                                                                     <v-text-field
-                                                                            v-model="editedItem.protein"
-                                                                            label="Protein (g)"
+                                                                            v-model="editedItem.credit"
+                                                                            label="credit (g)"
                                                                     ></v-text-field>
                                                                 </v-col>
                                                                 <v-col
@@ -605,7 +606,7 @@
                                 <v-data-table
                                         :headers="headers"
                                         :items="desserts"
-                                        sort-by="calories"
+                                        sort-by="lastName"
                                         class="elevation-1"
                                 >
                                     <template v-slot:top>
@@ -658,8 +659,8 @@
                                                                         md="4"
                                                                 >
                                                                     <v-text-field
-                                                                            v-model="editedItem.calories"
-                                                                            label="Calories"
+                                                                            v-model="editedItem.lastName"
+                                                                            label="lastName"
                                                                     ></v-text-field>
                                                                 </v-col>
                                                                 <v-col
@@ -668,8 +669,8 @@
                                                                         md="4"
                                                                 >
                                                                     <v-text-field
-                                                                            v-model="editedItem.fat"
-                                                                            label="Fat (g)"
+                                                                            v-model="editedItem.language"
+                                                                            label="language (g)"
                                                                     ></v-text-field>
                                                                 </v-col>
                                                                 <v-col
@@ -678,8 +679,8 @@
                                                                         md="4"
                                                                 >
                                                                     <v-text-field
-                                                                            v-model="editedItem.carbs"
-                                                                            label="Carbs (g)"
+                                                                            v-model="editedItem.email"
+                                                                            label="email (g)"
                                                                     ></v-text-field>
                                                                 </v-col>
                                                                 <v-col
@@ -688,8 +689,8 @@
                                                                         md="4"
                                                                 >
                                                                     <v-text-field
-                                                                            v-model="editedItem.protein"
-                                                                            label="Protein (g)"
+                                                                            v-model="editedItem.credit"
+                                                                            label="credit (g)"
                                                                     ></v-text-field>
                                                                 </v-col>
                                                                 <v-col
@@ -801,44 +802,44 @@
             dialogDelete: false,
             headers: [
                 {text: 'FirstName', align: 'start', value: 'name'},
-                {text: 'LastName', value: 'calories'},
-                {text: 'Language', value: 'fat'},
-                {text: 'Email', value: 'carbs'},
-                {text: 'Credit', value: 'protein'},
+                {text: 'LastName', value: 'lastName'},
+                {text: 'Language', value: 'language'},
+                {text: 'Email', value: 'email'},
+                {text: 'Credit', value: 'credit'},
                 {text: 'Dates begin/end', value: 'dates'},
                 {text: 'Actions', value: 'actions', sortable: false},
                 {text: '', value: 'data-table-expand'}
             ],
             headersSponsors: [
                 {text: 'FirstName', align: 'start', value: 'name'},
-                {text: 'LastName', value: 'calories'},
-                {text: 'Language', value: 'fat'},
+                {text: 'LastName', value: 'lastName'},
+                {text: 'Language', value: 'language'},
                 {text: 'Email', value: 'email'},
                 {text: 'Roles', value: 'role'},
                 {text: 'Actions', value: 'actions', sortable: false}
             ],
             headersIDP: [
                 {text: 'Headers', align: 'start', value: 'name'},
-                {text: 'Col1', value: 'calories'},
-                {text: 'Col2', value: 'fat'},
-                {text: 'Col3', value: 'carbs'},
+                {text: 'Col1', value: 'lastName'},
+                {text: 'Col2', value: 'language'},
+                {text: 'Col3', value: 'email'},
                 {text: 'Actions', value: 'actions', sortable: false},
             ],
             desserts: [],
             editedIndex: -1,
             editedItem: {
                 name: '',
-                calories: 0,
-                fat: 0,
-                carbs: 0,
-                protein: 0,
+                lastName: 0,
+                language: 0,
+                email: 0,
+                credit: 0,
             },
             defaultItem: {
                 name: '',
-                calories: 0,
-                fat: 0,
-                carbs: 0,
-                protein: 0,
+                lastName: 0,
+                language: 0,
+                email: 0,
+                credit: 0,
             },
         }),
 
@@ -868,30 +869,30 @@
                 this.desserts = [
                     {
                         name: 'Nicolas',
-                        calories: 'Lulu',
-                        fat: 'FR',
-                        carbs: 'toto@gmail.com',
-                        protein: 5,
+                        lastName: 'Lulu',
+                        language: 'FR',
+                        email: 'toto@gmail.com',
+                        credit: 5,
                         sponsors: [
                             {
                                 name: 'Nicolas',
-                                calories: 'sd',
-                                fat: 'FR',
+                                lastName: 'sd',
+                                language: 'FR',
                                 email: '@gmail.com',
                                 role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
-                                calories: 'qsds',
+                                lastName: 'qsds',
                                 email: '@gmail.com',
-                                fat: 'FR',
+                                language: 'FR',
                                 role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
-                                calories: 'dqs',
+                                lastName: 'dqs',
                                 email: '@gmail.com',
-                                fat: 'FR',
+                                language: 'FR',
                                 role: 'N+1'
                             }],
                         category: 'sponsor',
@@ -899,30 +900,30 @@
                     },
                     {
                         name: 'Nicia',
-                        calories: 'Mine',
-                        fat: 'NL',
-                        carbs: 'toto@gmail.com',
-                        protein: 5,
+                        lastName: 'Mine',
+                        language: 'NL',
+                        email: 'toto@gmail.com',
+                        credit: 5,
                         sponsors: [
                             {
                                 name: 'Nicolas',
-                                calories: 'sd',
-                                fat: 'FR',
+                                lastName: 'sd',
+                                language: 'FR',
                                 email: '@gmail.com',
                                 role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
-                                calories: 'qsds',
+                                lastName: 'qsds',
                                 email: '@gmail.com',
-                                fat: 'FR',
+                                language: 'FR',
                                 role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
-                                calories: 'dqs',
+                                lastName: 'dqs',
                                 email: '@gmail.com',
-                                fat: 'FR',
+                                language: 'FR',
                                 role: 'N+1'
                             }],
                         category: 'sponsor',
@@ -930,30 +931,30 @@
                     },
                     {
                         name: 'Cosma',
-                        calories: 'Mine',
-                        fat: 'EN',
-                        carbs: 'toto@gmail.com',
-                        protein: 5,
+                        lastName: 'Mine',
+                        language: 'EN',
+                        email: 'toto@gmail.com',
+                        credit: 5,
                         sponsors: [
                             {
                                 name: 'Nicolas',
-                                calories: 'sd',
-                                fat: 'FR',
+                                lastName: 'sd',
+                                language: 'FR',
                                 email: '@gmail.com',
                                 role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
-                                calories: 'qsds',
+                                lastName: 'qsds',
                                 email: '@gmail.com',
-                                fat: 'FR',
+                                language: 'FR',
                                 role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
-                                calories: 'dqs',
+                                lastName: 'dqs',
                                 email: '@gmail.com',
-                                fat: 'FR',
+                                language: 'FR',
                                 role: 'N+1'
                             }],
                         category: 'trainee',
@@ -961,30 +962,30 @@
                     },
                     {
                         name: 'Janey',
-                        calories: 'Mine',
-                        fat: 'FR',
-                        carbs: 'toto@gmail.com',
-                        protein: 5,
+                        lastName: 'Mine',
+                        language: 'FR',
+                        email: 'toto@gmail.com',
+                        credit: 5,
                         sponsors: [
                             {
                                 name: 'Nicolas',
-                                calories: 'sd',
-                                fat: 'FR',
+                                lastName: 'sd',
+                                language: 'FR',
                                 email: '@gmail.com',
                                 role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
-                                calories: 'qsds',
+                                lastName: 'qsds',
                                 email: '@gmail.com',
-                                fat: 'FR',
+                                language: 'FR',
                                 role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
-                                calories: 'dqs',
+                                lastName: 'dqs',
                                 email: '@gmail.com',
-                                fat: 'FR',
+                                language: 'FR',
                                 role: 'N+1'
                             }],
                         category: 'trainee',
@@ -992,30 +993,30 @@
                     },
                     {
                         name: 'Nicolette',
-                        calories: 'Dupond',
-                        fat: 'EN',
-                        carbs: 'toto@gmail.com',
-                        protein: 5,
+                        lastName: 'Dupond',
+                        language: 'EN',
+                        email: 'toto@gmail.com',
+                        credit: 5,
                         sponsors: [
                             {
                                 name: 'Nicolas',
-                                calories: 'sd',
-                                fat: 'FR',
+                                lastName: 'sd',
+                                language: 'FR',
                                 email: '@gmail.com',
                                 role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
-                                calories: 'qsds',
+                                lastName: 'qsds',
                                 email: '@gmail.com',
-                                fat: 'FR',
+                                language: 'FR',
                                 role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
-                                calories: 'dqs',
+                                lastName: 'dqs',
                                 email: '@gmail.com',
-                                fat: 'FR',
+                                language: 'FR',
                                 role: 'N+1'
                             }],
                         category: 'trainee',
@@ -1023,30 +1024,30 @@
                     },
                     {
                         name: 'Gary',
-                        calories: 'Lele',
-                        fat: 'EN',
-                        carbs: 'toto@gmail.com',
-                        protein: 5,
+                        lastName: 'Lele',
+                        language: 'EN',
+                        email: 'toto@gmail.com',
+                        credit: 5,
                         sponsors: [
                             {
                                 name: 'Nicolas',
-                                calories: 'sd',
-                                fat: 'FR',
+                                lastName: 'sd',
+                                language: 'FR',
                                 email: '@gmail.com',
                                 role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
-                                calories: 'qsds',
+                                lastName: 'qsds',
                                 email: '@gmail.com',
-                                fat: 'FR',
+                                language: 'FR',
                                 role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
-                                calories: 'dqs',
+                                lastName: 'dqs',
                                 email: '@gmail.com',
-                                fat: 'FR',
+                                language: 'FR',
                                 role: 'N+1'
                             }],
                         category: 'trainee',
@@ -1054,30 +1055,30 @@
                     },
                     {
                         name: 'Edward mm',
-                        calories: 'Lele',
-                        fat: 'EN',
-                        carbs: 'toto@gmail.com',
-                        protein: 5,
+                        lastName: 'Lele',
+                        language: 'EN',
+                        email: 'toto@gmail.com',
+                        credit: 5,
                         sponsors: [
                             {
                                 name: 'Nicolas',
-                                calories: 'sd',
-                                fat: 'FR',
+                                lastName: 'sd',
+                                language: 'FR',
                                 email: '@gmail.com',
                                 role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
-                                calories: 'qsds',
+                                lastName: 'qsds',
                                 email: '@gmail.com',
-                                fat: 'FR',
+                                language: 'FR',
                                 role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
-                                calories: 'dqs',
+                                lastName: 'dqs',
                                 email: '@gmail.com',
-                                fat: 'FR',
+                                language: 'FR',
                                 role: 'N+1'
                             }],
                         category: 'trainee',
@@ -1085,30 +1086,30 @@
                     },
                     {
                         name: 'Tyr',
-                        calories: 'Mine',
-                        fat: 'EN',
-                        carbs: 'toto@gmail.com',
-                        protein: 5,
+                        lastName: 'Mine',
+                        language: 'EN',
+                        email: 'toto@gmail.com',
+                        credit: 5,
                         sponsors: [
                             {
                                 name: 'Nicolas',
-                                calories: 'sd',
-                                fat: 'FR',
+                                lastName: 'sd',
+                                language: 'FR',
                                 email: '@gmail.com',
                                 role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
-                                calories: 'qsds',
+                                lastName: 'qsds',
                                 email: '@gmail.com',
-                                fat: 'FR',
+                                language: 'FR',
                                 role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
-                                calories: 'dqs',
+                                lastName: 'dqs',
                                 email: '@gmail.com',
-                                fat: 'FR',
+                                language: 'FR',
                                 role: 'N+1'
                             }],
                         category: 'trainee',
@@ -1116,30 +1117,30 @@
                     },
                     {
                         name: 'Christina',
-                        calories: 'Christina',
-                        fat: 'EN',
-                        carbs: 'toto@gmail.com',
-                        protein: 5,
+                        lastName: 'Christina',
+                        language: 'EN',
+                        email: 'toto@gmail.com',
+                        credit: 5,
                         sponsors: [
                             {
                                 name: 'Nicolas',
-                                calories: 'sd',
-                                fat: 'FR',
+                                lastName: 'sd',
+                                language: 'FR',
                                 email: '@gmail.com',
                                 role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
-                                calories: 'qsds',
+                                lastName: 'qsds',
                                 email: '@gmail.com',
-                                fat: 'FR',
+                                language: 'FR',
                                 role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
-                                calories: 'dqs',
+                                lastName: 'dqs',
                                 email: '@gmail.com',
-                                fat: 'FR',
+                                language: 'FR',
                                 role: 'N+1'
                             }],
                         category: 'trainee',
@@ -1147,30 +1148,30 @@
                     },
                     {
                         name: 'Donalda',
-                        calories: 'Mine',
-                        fat: 'EN',
-                        carbs: 'toto@gmail.com',
-                        protein: 5,
+                        lastName: 'Mine',
+                        language: 'EN',
+                        email: 'toto@gmail.com',
+                        credit: 5,
                         sponsors: [
                             {
                                 name: 'Nicolas',
-                                calories: 'sd',
-                                fat: 'FR',
+                                lastName: 'sd',
+                                language: 'FR',
                                 email: '@gmail.com',
                                 role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
-                                calories: 'qsds',
+                                lastName: 'qsds',
                                 email: '@gmail.com',
-                                fat: 'FR',
+                                language: 'FR',
                                 role: 'N+1'
                             },
                             {
                                 name: 'Nicolas',
-                                calories: 'dqs',
+                                lastName: 'dqs',
                                 email: '@gmail.com',
-                                fat: 'FR',
+                                language: 'FR',
                                 role: 'N+1'
                             }],
                         category: 'trainee',

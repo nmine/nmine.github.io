@@ -396,7 +396,7 @@
                             <v-expansion-panel-content>
                                 <v-data-table
                                         :headers="headers"
-                                        :items="desserts"
+                                        :items="participants"
                                         sort-by="lastName"
                                         :single-expand="singleExpand"
                                         class="elevation-1"
@@ -441,8 +441,8 @@
                                             ></v-divider>
                                             <v-spacer></v-spacer>
                                             <v-dialog
-                                                    v-model="dialog"
-                                                    max-width="500px"
+                                                    v-model="dialogCreateSponsor"
+                                                    max-width="600px"
                                             >
                                                 <template v-slot:activator="{ on, attrs }">
                                                     <v-btn
@@ -452,7 +452,7 @@
                                                             v-bind="attrs"
                                                             v-on="on"
                                                     >
-                                                        New Item
+                                                        New Sponsor
                                                     </v-btn>
                                                 </template>
                                                 <v-card>
@@ -469,8 +469,8 @@
                                                                         md="4"
                                                                 >
                                                                     <v-text-field
-                                                                            v-model="editedItem.name"
-                                                                            label="First Name Last Name"
+                                                                            v-model="newSponsor.name"
+                                                                            label="First Name"
                                                                     ></v-text-field>
                                                                 </v-col>
                                                                 <v-col
@@ -479,8 +479,8 @@
                                                                         md="4"
                                                                 >
                                                                     <v-text-field
-                                                                            v-model="editedItem.lastName"
-                                                                            label="lastName"
+                                                                            v-model="newSponsor.lastName"
+                                                                            label="Last Name"
                                                                     ></v-text-field>
                                                                 </v-col>
                                                                 <v-col
@@ -489,8 +489,8 @@
                                                                         md="4"
                                                                 >
                                                                     <v-text-field
-                                                                            v-model="editedItem.language"
-                                                                            label="language (g)"
+                                                                            v-model="newSponsor.language"
+                                                                            label="Language"
                                                                     ></v-text-field>
                                                                 </v-col>
                                                                 <v-col
@@ -499,8 +499,8 @@
                                                                         md="4"
                                                                 >
                                                                     <v-text-field
-                                                                            v-model="editedItem.email"
-                                                                            label="email (g)"
+                                                                            v-model="newSponsor.email"
+                                                                            label="Email"
                                                                     ></v-text-field>
                                                                 </v-col>
                                                                 <v-col
@@ -509,23 +509,203 @@
                                                                         md="4"
                                                                 >
                                                                     <v-text-field
-                                                                            v-model="editedItem.credit"
-                                                                            label="credit (g)"
+                                                                            v-model="newSponsor.credit"
+                                                                            label="Credit"
                                                                     ></v-text-field>
                                                                 </v-col>
-                                                                <v-col
-                                                                        cols="12"
-                                                                        sm="6"
-                                                                        md="4"
-                                                                >
+                                                            </v-row>
+                                                            <v-row>
+                                                                <v-col cols="12"
+                                                                       sm="3"
+                                                                       md="3">
+                                                                    <v-radio-group >
+                                                                        <v-radio
+                                                                                label="H+1"
+                                                                                value="n1"
+                                                                        ></v-radio>
+                                                                        <v-radio
+                                                                                label="RH Manager"
+                                                                                value="n2"
+                                                                        ></v-radio>
+                                                                        <v-radio
+                                                                                label="Others role"
+                                                                                value="other"
+                                                                        ></v-radio>
+                                                                    </v-radio-group>
+                                                                </v-col>
+                                                                <v-col cols="12"
+                                                                       sm="9"
+                                                                       md="9">
                                                                     <v-select
                                                                             v-model="value"
-                                                                            :items="items"
+                                                                            :items="participantsNames"
                                                                             attach
                                                                             chips
-                                                                            label="Specialities"
+                                                                            label="Trainees"
                                                                             multiple
                                                                     ></v-select>
+                                                                </v-col>
+                                                            </v-row>
+                                                        </v-container>
+                                                    </v-card-text>
+
+                                                    <v-card-actions>
+                                                        <v-spacer></v-spacer>
+                                                        <v-btn
+                                                                color="blue darken-1"
+                                                                text
+                                                                @click="close"
+                                                        >
+                                                            Cancel
+                                                        </v-btn>
+                                                        <v-btn
+                                                                color="blue darken-1"
+                                                                text
+                                                                @click="save"
+                                                        >
+                                                            Save
+                                                        </v-btn>
+                                                    </v-card-actions>
+                                                </v-card>
+                                            </v-dialog>
+                                            <v-dialog
+                                                    v-model="dialogCreateTrainee"
+                                                    max-width="500px"
+                                            >
+                                                <template v-slot:activator="{ on, attrs }">
+                                                    <v-btn
+                                                            color="primary"
+                                                            dark
+                                                            class="mb-2"
+                                                            v-bind="attrs"
+                                                            v-on="on"
+                                                    >
+                                                        New Trainee
+                                                    </v-btn>
+                                                </template>
+                                                <v-card>
+                                                    <v-card-title>
+                                                        <span class="headline">{{ formTitle }}</span>
+                                                    </v-card-title>
+
+                                                    <v-card-text>
+                                                        <v-container>
+                                                            <v-row>
+                                                                <v-col
+                                                                        cols="12"
+                                                                        sm="6"
+                                                                        md="4"
+                                                                >
+                                                                    <v-text-field
+                                                                            v-model="newTrainee.name"
+                                                                            label="First Name"
+                                                                    ></v-text-field>
+                                                                </v-col>
+                                                                <v-col
+                                                                        cols="12"
+                                                                        sm="6"
+                                                                        md="4"
+                                                                >
+                                                                    <v-text-field
+                                                                            v-model="newTrainee.lastName"
+                                                                            label="Last Name"
+                                                                    ></v-text-field>
+                                                                </v-col>
+                                                                <v-col
+                                                                        cols="12"
+                                                                        sm="6"
+                                                                        md="4"
+                                                                >
+                                                                    <v-text-field
+                                                                            v-model="newTrainee.language"
+                                                                            label="Language"
+                                                                    ></v-text-field>
+                                                                </v-col>
+                                                                <v-col
+                                                                        cols="12"
+                                                                        sm="6"
+                                                                        md="4"
+                                                                >
+                                                                    <v-text-field
+                                                                            v-model="newTrainee.email"
+                                                                            label="Email"
+                                                                    ></v-text-field>
+                                                                </v-col>
+                                                                <v-col
+                                                                        cols="12"
+                                                                        sm="6"
+                                                                        md="4"
+                                                                >
+                                                                    <v-text-field
+                                                                            v-model="newTrainee.credit"
+                                                                            label="Credit"
+                                                                    ></v-text-field>
+                                                                </v-col>
+                                                            </v-row>
+                                                            <v-row>
+                                                                <v-col
+                                                                        cols="12"
+                                                                        lg="6"
+                                                                >
+                                                                    <v-menu
+                                                                            ref="menu1"
+                                                                            v-model="menu1"
+                                                                            :close-on-content-click="false"
+                                                                            transition="scale-transition"
+                                                                            offset-y
+                                                                            max-width="290px"
+                                                                            min-width="auto"
+                                                                    >
+                                                                        <template v-slot:activator="{ on, attrs }">
+                                                                            <v-text-field
+                                                                                    v-model="dateFormatted"
+                                                                                    label="Date begin"
+                                                                                    hint="MM/DD/YYYY format"
+                                                                                    persistent-hint
+                                                                                    prepend-icon="mdi-calendar"
+                                                                                    v-bind="attrs"
+                                                                                    @blur="date = parseDate(dateFormatted)"
+                                                                                    v-on="on"
+                                                                            ></v-text-field>
+                                                                        </template>
+                                                                        <v-date-picker
+                                                                                v-model="date"
+                                                                                no-title
+                                                                                @input="menu1 = false"
+                                                                        ></v-date-picker>
+                                                                    </v-menu>
+                                                                </v-col>
+                                                                <v-col
+                                                                        cols="12"
+                                                                        lg="6"
+                                                                >
+                                                                    <v-menu
+                                                                            ref="menu1"
+                                                                            v-model="menu1"
+                                                                            :close-on-content-click="false"
+                                                                            transition="scale-transition"
+                                                                            offset-y
+                                                                            max-width="290px"
+                                                                            min-width="auto"
+                                                                    >
+                                                                        <template v-slot:activator="{ on, attrs }">
+                                                                            <v-text-field
+                                                                                    v-model="dateFormatted"
+                                                                                    label="Date end"
+                                                                                    hint="MM/DD/YYYY format"
+                                                                                    persistent-hint
+                                                                                    prepend-icon="mdi-calendar"
+                                                                                    v-bind="attrs"
+                                                                                    @blur="date = parseDate(dateFormatted)"
+                                                                                    v-on="on"
+                                                                            ></v-text-field>
+                                                                        </template>
+                                                                        <v-date-picker
+                                                                                v-model="date"
+                                                                                no-title
+                                                                                @input="menu1 = false"
+                                                                        ></v-date-picker>
+                                                                    </v-menu>
                                                                 </v-col>
                                                             </v-row>
                                                         </v-container>
@@ -605,7 +785,7 @@
                             <v-expansion-panel-content>
                                 <v-data-table
                                         :headers="headers"
-                                        :items="desserts"
+                                        :items="participants"
                                         sort-by="lastName"
                                         class="elevation-1"
                                 >
@@ -621,8 +801,7 @@
                                             ></v-divider>
                                             <v-spacer></v-spacer>
                                             <v-dialog
-                                                    v-model="dialog"
-                                                    max-width="500px"
+                                                    v-model="dialogCreateTrainee"
                                             >
                                                 <template v-slot:activator="{ on, attrs }">
                                                     <v-btn
@@ -649,7 +828,7 @@
                                                                         md="4"
                                                                 >
                                                                     <v-text-field
-                                                                            v-model="editedItem.name"
+                                                                            v-model="newTrainee.name"
                                                                             label="First Name Last Name"
                                                                     ></v-text-field>
                                                                 </v-col>
@@ -659,7 +838,7 @@
                                                                         md="4"
                                                                 >
                                                                     <v-text-field
-                                                                            v-model="editedItem.lastName"
+                                                                            v-model="newTrainee.lastName"
                                                                             label="lastName"
                                                                     ></v-text-field>
                                                                 </v-col>
@@ -669,7 +848,7 @@
                                                                         md="4"
                                                                 >
                                                                     <v-text-field
-                                                                            v-model="editedItem.language"
+                                                                            v-model="newTrainee.language"
                                                                             label="language (g)"
                                                                     ></v-text-field>
                                                                 </v-col>
@@ -679,7 +858,7 @@
                                                                         md="4"
                                                                 >
                                                                     <v-text-field
-                                                                            v-model="editedItem.email"
+                                                                            v-model="newTrainee.email"
                                                                             label="email (g)"
                                                                     ></v-text-field>
                                                                 </v-col>
@@ -689,7 +868,7 @@
                                                                         md="4"
                                                                 >
                                                                     <v-text-field
-                                                                            v-model="editedItem.credit"
+                                                                            v-model="newTrainee.credit"
                                                                             label="credit (g)"
                                                                     ></v-text-field>
                                                                 </v-col>
@@ -703,7 +882,7 @@
                                                                             :items="items"
                                                                             attach
                                                                             chips
-                                                                            label="Specialities"
+                                                                            label="Trainee(s)"
                                                                             multiple
                                                                     ></v-select>
                                                                 </v-col>
@@ -716,7 +895,7 @@
                                                         <v-btn
                                                                 color="blue darken-1"
                                                                 text
-                                                                @click="close"
+                                                                @click="closeSponsorDialog"
                                                         >
                                                             Cancel
                                                         </v-btn>
@@ -798,7 +977,8 @@
             e1: 1,
             items: ["foo", "bar", "fizz", "buzz"],
             dates: ['2019-09-10', '2019-09-20'],
-            dialog: false,
+            dialogCreateTrainee: false,
+            dialogCreateSponsor: false,
             dialogDelete: false,
             headers: [
                 {text: 'FirstName', align: 'start', value: 'name'},
@@ -825,22 +1005,41 @@
                 {text: 'Col3', value: 'email'},
                 {text: 'Actions', value: 'actions', sortable: false},
             ],
-            desserts: [],
+            participants: [],
             editedIndex: -1,
-            editedItem: {
+            newTrainee: {
                 name: '',
-                lastName: 0,
+                lastName: '',
                 language: 0,
-                email: 0,
+                email: '',
+                credit: 0,
+                dateBegin: '',
+                dateEnd: ''
+            },
+            newSponsor: {
+                name: '',
+                lastName: '',
+                language: 0,
+                email: '',
+                credit: 0,
+                role: ''
+            },
+            defaultTrainee: {
+                name: '',
+                lastName: '',
+                language: 0,
+                email: '',
                 credit: 0,
             },
-            defaultItem: {
+            defaultSponsor: {
                 name: '',
-                lastName: 0,
+                lastName: '',
                 language: 0,
-                email: 0,
+                email: '',
                 credit: 0,
+                role: ''
             },
+            participantsNames: ["Nicolas Mine", "John Dooz", "Jane Doo", "Matt Po","Nicolas Minez", "John Dood", "Jane Doos", "Matt Pox","Nicolas Minev", "John Doos", "Jane Dooh", "Matt Poh"]
         }),
 
         computed: {
@@ -866,7 +1065,7 @@
 
         methods: {
             initialize() {
-                this.desserts = [
+                this.participants = [
                     {
                         name: 'Nicolas',
                         lastName: 'Lulu',
@@ -1181,38 +1380,46 @@
             },
 
             editItem(item) {
-                this.editedIndex = this.desserts.indexOf(item)
-                this.editedItem = Object.assign({}, item)
-                this.dialog = true
+                this.editedIndex = this.participants.indexOf(item)
+                this.newTrainee = Object.assign({}, item)
+                this.dialogCreateTrainee = true
             }
             ,
 
             deleteItem(item) {
-                this.editedIndex = this.desserts.indexOf(item)
-                this.editedItem = Object.assign({}, item)
+                this.editedIndex = this.participants.indexOf(item)
+                this.newTrainee = Object.assign({}, item)
                 this.dialogDelete = true
             }
             ,
 
             deleteItemConfirm() {
-                this.desserts.splice(this.editedIndex, 1)
+                this.participants.splice(this.editedIndex, 1)
                 this.closeDelete()
             }
             ,
 
             close() {
-                this.dialog = false
+                this.dialogCreateTrainee = false
                 this.$nextTick(() => {
-                    this.editedItem = Object.assign({}, this.defaultItem)
+                    this.newTrainee = Object.assign({}, this.defaultTrainee)
                     this.editedIndex = -1
                 })
             }
             ,
 
+            closeSponsorDialog() {
+                this.dialogCreateSponsor = false
+                this.$nextTick(() => {
+                    this.newSponsor = Object.assign({}, this.defaultSponsor)
+                    this.editedIndex = -1
+                })
+            },
+
             closeDelete() {
                 this.dialogDelete = false
                 this.$nextTick(() => {
-                    this.editedItem = Object.assign({}, this.defaultItem)
+                    this.newTrainee = Object.assign({}, this.defaultTrainee)
                     this.editedIndex = -1
                 })
             }
@@ -1220,9 +1427,9 @@
 
             save() {
                 if (this.editedIndex > -1) {
-                    Object.assign(this.desserts[this.editedIndex], this.editedItem)
+                    Object.assign(this.participants[this.editedIndex], this.newTrainee)
                 } else {
-                    this.desserts.push(this.editedItem)
+                    this.participants.push(this.newTrainee)
                 }
                 this.close()
             }

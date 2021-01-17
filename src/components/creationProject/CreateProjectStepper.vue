@@ -33,6 +33,10 @@
 
             <v-stepper-step step="5" editable>Trainee</v-stepper-step>
 
+            <v-divider></v-divider>
+
+            <v-stepper-step step="6" editable>Specificities</v-stepper-step>
+
         </v-stepper-header>
 
         <v-stepper-items>
@@ -411,6 +415,160 @@
                                                     class="elevation-3"
                                                     :hide-default-footer="true"
                                             >
+                                                <template v-slot:top>
+                                                    <v-toolbar
+                                                            flat
+                                                    >
+                                                        <v-dialog
+                                                                v-model="dialogCreateSponsor"
+                                                                max-width="600px"
+                                                        >
+                                                            <template v-slot:activator="{ on, attrs }">
+                                                                <v-btn
+                                                                        color="primary"
+                                                                        dark
+                                                                        small
+                                                                        class="mb-2"
+                                                                        v-bind="attrs"
+                                                                        v-on="on"
+                                                                >
+                                                                    New Sponsor
+                                                                </v-btn>
+                                                            </template>
+                                                            <v-card>
+                                                                <v-card-title>
+                                                                    <span class="headline">{{ formTitle }}</span>
+                                                                </v-card-title>
+
+                                                                <v-card-text>
+                                                                    <v-container>
+                                                                        <v-row>
+                                                                            <v-col
+                                                                                    cols="12"
+                                                                                    sm="6"
+                                                                                    md="4"
+                                                                            >
+                                                                                <v-text-field
+                                                                                        v-model="newSponsor.name"
+                                                                                        label="First Name"
+                                                                                ></v-text-field>
+                                                                            </v-col>
+                                                                            <v-col
+                                                                                    cols="12"
+                                                                                    sm="6"
+                                                                                    md="4"
+                                                                            >
+                                                                                <v-text-field
+                                                                                        v-model="newSponsor.lastName"
+                                                                                        label="Last Name"
+                                                                                ></v-text-field>
+                                                                            </v-col>
+                                                                            <v-col
+                                                                                    cols="12"
+                                                                                    sm="6"
+                                                                                    md="4"
+                                                                            >
+                                                                                <v-text-field
+                                                                                        v-model="newSponsor.language"
+                                                                                        label="Language"
+                                                                                ></v-text-field>
+                                                                            </v-col>
+                                                                            <v-col
+                                                                                    cols="12"
+                                                                                    sm="6"
+                                                                                    md="4"
+                                                                            >
+                                                                                <v-text-field
+                                                                                        v-model="newSponsor.email"
+                                                                                        label="Email"
+                                                                                ></v-text-field>
+                                                                            </v-col>
+                                                                            <v-col
+                                                                                    cols="12"
+                                                                                    sm="6"
+                                                                                    md="4"
+                                                                            >
+                                                                                <v-text-field
+                                                                                        v-model="newSponsor.credit"
+                                                                                        label="Credit"
+                                                                                ></v-text-field>
+                                                                            </v-col>
+                                                                        </v-row>
+                                                                        <v-row>
+                                                                            <v-col cols="12"
+                                                                                   sm="3"
+                                                                                   md="3">
+                                                                                <v-radio-group>
+                                                                                    <v-radio
+                                                                                            label="H+1"
+                                                                                            value="n1"
+                                                                                    ></v-radio>
+                                                                                    <v-radio
+                                                                                            label="RH Manager"
+                                                                                            value="n2"
+                                                                                    ></v-radio>
+                                                                                    <v-radio
+                                                                                            label="Others role"
+                                                                                            value="other"
+                                                                                    ></v-radio>
+                                                                                </v-radio-group>
+                                                                            </v-col>
+                                                                            <v-col cols="12"
+                                                                                   sm="9"
+                                                                                   md="9">
+                                                                                <v-select
+                                                                                        v-model="value"
+                                                                                        :items="participantsNames"
+                                                                                        attach
+                                                                                        chips
+                                                                                        label="Trainees"
+                                                                                        multiple
+                                                                                ></v-select>
+                                                                            </v-col>
+                                                                        </v-row>
+                                                                    </v-container>
+                                                                </v-card-text>
+
+                                                                <v-card-actions>
+                                                                    <v-spacer></v-spacer>
+                                                                    <v-btn
+                                                                            color="blue darken-1"
+                                                                            text
+                                                                            @click="close"
+                                                                    >
+                                                                        Cancel
+                                                                    </v-btn>
+                                                                    <v-btn
+                                                                            color="blue darken-1"
+                                                                            text
+                                                                            @click="save"
+                                                                    >
+                                                                        Save
+                                                                    </v-btn>
+                                                                </v-card-actions>
+                                                            </v-card>
+                                                        </v-dialog>
+                                                        <v-dialog v-model="dialogDelete" max-width="500px">
+                                                            <v-card>
+                                                                <v-card-title class="headline">Are you sure you want to
+                                                                    delete this
+                                                                    item?
+                                                                </v-card-title>
+                                                                <v-card-actions>
+                                                                    <v-spacer></v-spacer>
+                                                                    <v-btn color="blue darken-1" text
+                                                                           @click="closeDelete">Cancel
+                                                                    </v-btn>
+                                                                    <v-btn color="blue darken-1" text
+                                                                           @click="deleteItemConfirm">
+                                                                        OK
+                                                                    </v-btn>
+                                                                    <v-spacer></v-spacer>
+                                                                </v-card-actions>
+                                                            </v-card>
+                                                        </v-dialog>
+                                                    </v-toolbar>
+                                                </template>
                                                 <template v-slot:item.actions="{ item }">
                                                     <v-icon
                                                             small
@@ -518,7 +676,7 @@
                                                                 <v-col cols="12"
                                                                        sm="3"
                                                                        md="3">
-                                                                    <v-radio-group >
+                                                                    <v-radio-group>
                                                                         <v-radio
                                                                                 label="H+1"
                                                                                 value="n1"
@@ -963,6 +1121,48 @@
                 </v-btn>
             </v-stepper-content>
 
+            <v-stepper-content step="6">
+                <v-container>
+                    <v-row>
+                        <v-switch
+                                v-model="switch1"
+                                label="Multiple Coach project"
+                        ></v-switch>
+                    </v-row>
+                    <v-row>
+                        <v-switch
+                                v-model="switch2"
+                                label="24 Hotline Coach"
+                        ></v-switch>
+                    </v-row>
+                    <v-row>
+                        <v-file-input
+                                v-model="files"
+                                placeholder="Upload presentations documents"
+                                label="File input"
+                                multiple
+                                prepend-icon="mdi-paperclip"
+                        >
+                            <template v-slot:selection="{ text }">
+                                <v-chip
+                                        small
+                                        label
+                                        color="primary"
+                                >
+                                    {{ text }}
+                                </v-chip>
+                            </template>
+                        </v-file-input>
+                    </v-row>
+                </v-container>
+                <v-btn
+                        color="primary"
+                        @click="e1 = 1"
+                >
+                    Continue
+                </v-btn>
+            </v-stepper-content>
+
         </v-stepper-items>
     </v-stepper>
 </template>
@@ -972,6 +1172,9 @@
         name: 'CreateProjectStepper',
 
         data: () => ({
+            files: [],
+            switch1: false,
+            switch2: false,
             singleExpand: false,
             expanded: [],
             e1: 1,
@@ -1039,7 +1242,7 @@
                 credit: 0,
                 role: ''
             },
-            participantsNames: ["Nicolas Mine", "John Dooz", "Jane Doo", "Matt Po","Nicolas Minez", "John Dood", "Jane Doos", "Matt Pox","Nicolas Minev", "John Doos", "Jane Dooh", "Matt Poh"]
+            participantsNames: ["Nicolas Mine", "John Dooz", "Jane Doo", "Matt Po", "Nicolas Minez", "John Dood", "Jane Doos", "Matt Pox", "Nicolas Minev", "John Doos", "Jane Dooh", "Matt Poh"]
         }),
 
         computed: {

@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a352a796-daf2-46f8-bbec-9139837b2eee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/About.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/IDP.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Sessions.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CoachCatalogue.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CoachSelection.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/About.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +33,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/creationProject" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -49,6 +47,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views" />
       <recent name="$PROJECT_DIR$/src/components/creationProject" />
     </key>
   </component>
@@ -91,7 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1608801934116</updated>
       <workItem from="1610114197015" duration="18051000" />
-      <workItem from="1610553220553" duration="12986000" />
+      <workItem from="1610553220553" duration="14169000" />
     </task>
     <task id="LOCAL-00001" summary="catalogue">
       <created>1610116484561</created>
@@ -205,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611350202181</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add router">
+      <created>1611352302992</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1611352302992</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +242,8 @@
     <MESSAGE value="add specificities step" />
     <MESSAGE value="add trainee - Sponsor -Participant  steps" />
     <MESSAGE value="Add navigation drawer &#10;before adding router" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add navigation drawer &#10;before adding router" />
+    <MESSAGE value="Add router" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add router" />
   </component>
   <component name="WindowStateProjectService">
     <state x="304" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610118351967">
@@ -247,10 +254,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="578" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1611350764380" />
-    <state x="416" y="137" key="CommitChangelistDialog2" timestamp="1611350202071">
+    <state x="416" y="137" key="CommitChangelistDialog2" timestamp="1611352302852">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="416" y="137" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1611350202071" />
+    <state x="416" y="137" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1611352302852" />
     <state width="1638" height="280" key="GridCell.Tab.0.bottom" timestamp="1611350164564">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -267,18 +274,18 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1638" height="280" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1611350164564" />
-    <state x="440" y="276" key="Vcs.Push.Dialog.v2" timestamp="1611350204114">
+    <state x="440" y="276" key="Vcs.Push.Dialog.v2" timestamp="1611352304485">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="440" y="276" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1611350204114" />
+    <state x="440" y="276" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1611352304485" />
     <state x="582" y="388" key="cloudConfig.PluginsDialog" timestamp="1610114235155">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="582" y="388" key="cloudConfig.PluginsDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1610114235155" />
-    <state x="100" y="123" width="1480" height="827" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1611350651634">
+    <state x="100" y="123" width="1480" height="827" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1611353346998">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="100" y="123" width="1480" height="827" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1611350651634" />
+    <state x="100" y="123" width="1480" height="827" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1611353346998" />
     <state x="421" y="124" width="837" height="825" key="find.popup" timestamp="1610553605927">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>

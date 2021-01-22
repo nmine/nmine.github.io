@@ -78,9 +78,9 @@
             drawer: true,
             items: [
                 { title: 'Home', icon: 'mdi-view-dashboard', path: '/'},
+                { title: 'IDP', icon: 'mdi-image' , path: '/idp'},
+                { title: 'Sessions', icon: 'mdi-help-box' , path: '/sessions'},
                 { title: 'ProjectsCreation', icon: 'mdi-view-dashboard', path: '/projectsCreation'},
-                { title: 'Photos', icon: 'mdi-image' },
-                { title: 'About', icon: 'mdi-help-box' },
             ],
             right: null,
         }),

@@ -1,5 +1,8 @@
 <template>
   <v-app>
+    <v-navigation-drawer app>
+      <!-- -->
+    </v-navigation-drawer>
     <v-app-bar
       app
       color="primary"
@@ -14,8 +17,6 @@
           transition="scale-transition"
           width="70"
         />
-
-
       </div>
 
       <v-spacer></v-spacer>
@@ -24,6 +25,7 @@
     </v-app-bar>
 
     <v-main>
+<!--      <router-view></router-view>-->
       <create-project-stepper/>
     </v-main>
   </v-app>

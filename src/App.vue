@@ -1,7 +1,7 @@
 <template>
     <v-app>
         <v-navigation-drawer app  v-model="drawer" class="white">
-            <v-list-item class="px-2">
+            <v-list-item  :to="profilePath">
                 <v-list-item-avatar>
                     <v-img src="https://randomuser.me/api/portraits/women/85.jpg"></v-img>
                 </v-list-item-avatar>
@@ -76,11 +76,13 @@
 
         data: () => ({
             drawer: true,
+            profilePath : '/profile',
             items: [
                 { title: 'Home', icon: 'mdi-view-dashboard', path: '/'},
                 { title: 'IDP', icon: 'mdi-image' , path: '/idp'},
                 { title: 'Sessions', icon: 'mdi-help-box' , path: '/sessions'},
                 { title: 'ProjectsCreation', icon: 'mdi-view-dashboard', path: '/projectsCreation'},
+                { title: 'Project', icon: 'mdi-view-dashboard', path: '/project'},
             ],
             right: null,
         }),

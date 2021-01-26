@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <v-container>
         <v-dialog
                 v-model="dialogCreateTrainee"
         >
@@ -21,7 +21,7 @@
 
                 <v-card-text>
                     <v-container>
-                        <v-stepper v-model="e1" >
+                        <v-stepper v-model="e1">
                             <v-stepper-header>
                                 <v-stepper-step
                                         step="1"
@@ -71,45 +71,11 @@
                                     </v-btn>
                                 </v-stepper-content>
 
-                                <v-stepper-content  step="2">
+                                <v-stepper-content step="2">
 
-                                    <v-container  fluid class="grey lighten-5">
+                                    <v-container fluid class="grey lighten-5">
                                         <v-row no-gutters>
                                             <v-col :key="2" cols="12" lg="12">
-                                                <v-row>
-                                                    <div class="text-center">
-                                                        <v-menu offset-y>
-                                                            <template v-slot:activator="{ on, attrs }">
-                                                                <v-btn
-                                                                        color="primary"
-                                                                        dark
-                                                                        v-bind="attrs"
-                                                                        v-on="on"
-                                                                >
-                                                                    Dropdown
-                                                                </v-btn>
-                                                            </template>
-                                                            <v-list>
-                                                                <v-list-item
-                                                                        v-for="(item, index) in items"
-                                                                        :key="index"
-                                                                >
-                                                                    <v-list-item-title>{{ item.title }}</v-list-item-title>
-                                                                </v-list-item>
-                                                            </v-list>
-                                                        </v-menu>
-                                                    </div>
-                                                    <v-badge
-                                                            :content="messages"
-                                                            :value="messages"
-                                                            color="green"
-                                                            overlap
-                                                    >
-                                                        <v-icon large>
-                                                            mdi-account
-                                                        </v-icon>
-                                                    </v-badge>
-                                                </v-row>
                                                 <v-row>
                                                     <v-col cols="4">
                                                         <v-card class="mx-auto pa-5">
@@ -341,10 +307,11 @@
                                     </v-btn>
                                 </v-stepper-content>
 
-                                <v-stepper-content  step="3">
+                                <v-stepper-content step="3">
 
-                                    <v-container  fluid class="grey lighten-5">
-                                        Calendly
+                                    <v-container fluid class="grey lighten-5">
+                                        <vue-calendly url="https://calendly.com/nicolas-mine11/30min"
+                                                      :height="600"></vue-calendly>
                                     </v-container>
 
                                     <v-btn
@@ -379,7 +346,31 @@
                 </v-card-actions>
             </v-card>
         </v-dialog>
-    </div>
+        <v-row>
+            <v-col cols="12">
+                <v-card>
+                    <v-card-title>
+                        <span class="headline">Session1</span>
+                    </v-card-title>
+
+                    <v-card-text>14h00 avec coach1 <v-btn class="float-md-right">
+                        Rejoindre session
+                    </v-btn></v-card-text>
+                </v-card>
+            </v-col>
+            <v-col cols="12">
+                <v-card>
+                    <v-card-title>
+                        <span class="headline">Session2</span>
+                    </v-card-title>
+
+                    <v-card-text>14h00 avec coach1 <v-btn class="float-md-right">
+                        Rejoindre session
+                    </v-btn></v-card-text>
+                </v-card>
+            </v-col>
+        </v-row>
+    </v-container>
 </template>
 
 <script>

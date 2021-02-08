@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a352a796-daf2-46f8-bbec-9139837b2eee" name="Default Changelist" comment="project page &#10;&#10;Add &#10;- Sponsor role componenet&#10;- Project Milestone">
+    <list default="true" id="a352a796-daf2-46f8-bbec-9139837b2eee" name="Default Changelist" comment="Create project stepper , validation participants &#10;&#10;Add &#10;- alert with message &#10;- color row table&#10;&#10;Update Vuetify version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/creationProject/CreateProjectStepper.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/creationProject/CreateProjectStepper.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -251,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612779725265</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Create project stepper , validation participants &#10;&#10;Add &#10;- alert with message &#10;- color row table&#10;&#10;Update Vuetify version">
+      <created>1612787601603</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1612787601603</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +290,8 @@
     <MESSAGE value="Add session and IDP" />
     <MESSAGE value="Add project and Profile.vue" />
     <MESSAGE value="project page &#10;&#10;Add &#10;- Sponsor role componenet&#10;- Project Milestone" />
-    <option name="LAST_COMMIT_MESSAGE" value="project page &#10;&#10;Add &#10;- Sponsor role componenet&#10;- Project Milestone" />
+    <MESSAGE value="Create project stepper , validation participants &#10;&#10;Add &#10;- alert with message &#10;- color row table&#10;&#10;Update Vuetify version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create project stepper , validation participants &#10;&#10;Add &#10;- alert with message &#10;- color row table&#10;&#10;Update Vuetify version" />
   </component>
   <component name="masterDetails">
     <states>

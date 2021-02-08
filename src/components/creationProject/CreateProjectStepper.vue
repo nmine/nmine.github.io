@@ -14,13 +14,11 @@
         Coach Catalogue
       </v-stepper-step>
 
-
       <v-divider></v-divider>
 
       <v-stepper-step step="3" editable>
         Coach Basket
       </v-stepper-step>
-
 
       <v-divider></v-divider>
 
@@ -37,6 +35,10 @@
       <v-divider></v-divider>
 
       <v-stepper-step step="7" editable>Specificities</v-stepper-step>
+
+      <v-divider></v-divider>
+
+      <v-stepper-step step="8" editable>Overview</v-stepper-step>
 
     </v-stepper-header>
 
@@ -1131,6 +1133,21 @@
               </template>
             </v-file-input>
           </v-row>
+          <v-row>
+            <v-checkbox
+                v-model="checkbox1"
+                label="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetu"
+            ></v-checkbox>
+            <v-checkbox
+                v-model="checkbox1"
+                label="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetu"
+            ></v-checkbox>
+            <v-checkbox
+                v-model="checkbox1"
+                label="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetu"
+            ></v-checkbox>
+          </v-row>
+
         </v-container>
         <v-btn
             color="primary"
@@ -1138,6 +1155,64 @@
         >
           Continue
         </v-btn>
+      </v-stepper-content>
+
+      <v-stepper-content step="8">
+        <v-container>
+          <v-row>
+            <v-col cols="6">
+              <v-text-field
+                  v-model="startDate"
+                  label="Project Start date"
+                  prepend-icon="mdi-calendar"
+                  readonly
+              ></v-text-field>
+            </v-col>
+            <v-col cols="6">
+              <v-text-field
+                  v-model="startDate"
+                  label="End date"
+                  prepend-icon="mdi-calendar"
+                  readonly
+              ></v-text-field>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col cols="6">
+              Milestone date :
+            </v-col>
+            <v-col cols="6">
+              <v-text-field
+                  v-model="startDate"
+                  label="Milestone1"
+                  prepend-icon="mdi-calendar"
+                  readonly
+              ></v-text-field>
+            </v-col>
+            <v-col cols="6"></v-col>
+            <v-col cols="6">
+              <v-text-field
+                  v-model="startDate"
+                  label="Milestone2"
+                  prepend-icon="mdi-calendar"
+                  readonly
+              ></v-text-field>
+            </v-col>
+          </v-row>
+          <v-row>
+            1 date du project + milestones,
+            <br/>
+            2 event date
+            <br/>
+            3 sponsor selected (role) avec definition a coté
+            <br/>
+            4 list of coach selected (nom , language, pays)
+            <br/>
+            5 nombre de partipant + nombre de coach
+            <br/>
+            6 specificities, nom des documents
+          </v-row>
+        </v-container>
       </v-stepper-content>
 
     </v-stepper-items>

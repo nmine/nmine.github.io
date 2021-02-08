@@ -43,7 +43,7 @@
     <v-stepper-items>
       <v-stepper-content step="1">
         <v-container>
-          <v-row>
+          <v-row class="pa-5">
             <v-col
                 cols="12"
                 sm="6"
@@ -103,7 +103,7 @@
               </v-menu>
             </v-col>
           </v-row>
-          <v-row>
+          <v-row class="pa-5">
             <v-col
                 cols="12"
                 sm="6"
@@ -123,7 +123,7 @@
               ></v-date-picker>
             </v-col>
           </v-row>
-          <v-row>
+          <v-row class="pa-5">
             <v-data-table
                 :items="sponsorRoles"
                 :headers="headerSponsorRoles"
@@ -192,7 +192,7 @@
               </template>
             </v-data-table>
           </v-row>
-          <v-row>
+          <v-row class="pa-5">
             <v-slider
                 v-model="value"
                 :rules="rules"
@@ -203,9 +203,9 @@
                 class="pt-10"
             ></v-slider>
           </v-row>
-          <v-btn
-              color="primary"
-              @click="e1 = 1"
+          <v-btn class="ma-5"
+                 color="primary"
+                 @click="e1 = 1"
           >
             Continue
           </v-btn>
@@ -1026,6 +1026,15 @@
       <v-stepper-content step="6">
         <v-row>
           <v-col cols="12" sm="12">
+            <v-alert
+                outlined
+                type="warning"
+                border="left"
+            >
+              Trainee Toto has no Sponsor
+            </v-alert>
+          </v-col>
+          <v-col cols="12" sm="12">
             <v-data-table
                 :headers="headersValidation"
                 :items="participants"
@@ -1033,6 +1042,7 @@
                 :single-expand="singleExpand"
                 class="elevation-1"
                 item-key="name"
+                :item-class="itemRowBackground"
                 show-expand
             >
               <template v-slot:top>
@@ -1046,6 +1056,15 @@
                       vertical
                   ></v-divider>
                   <v-spacer></v-spacer>
+                  <v-btn
+                      color="red"
+                      dark
+                      class="mb-2"
+                      v-bind="attrs"
+                      v-on="on"
+                  >
+                    Export List
+                  </v-btn>
                 </v-toolbar>
               </template>
               <template v-slot:expanded-item="{ headers, item }">
@@ -1059,7 +1078,6 @@
                   </v-data-table>
                 </td>
               </template>
-
               <template v-slot:no-data>
                 <v-btn
                     color="primary"
@@ -1077,6 +1095,7 @@
         >
           Continue
         </v-btn>
+
       </v-stepper-content>
 
       <v-stepper-content step="7">
@@ -1134,18 +1153,18 @@ export default {
       {
         role: 'N+1',
         definition: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ',
-        chosen : false
+        chosen: false
       },
       {
         role: 'HR Manager',
         definition: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, se',
-        chosen : false
+        chosen: false
       }
     ],
     headerSponsorRoles: [
       {text: 'Role', align: 'start', value: 'role'},
       {text: 'Definition', align: 'start', value: 'definition'},
-      { text: '', value: 'chosen' }
+      {text: '', value: 'chosen'}
     ],
     startDate: new Date().toISOString().substr(0, 10),
     endDate: new Date().toISOString().substr(0, 10),
@@ -1287,7 +1306,8 @@ export default {
               role: 'N+1'
             }],
           category: 'sponsor',
-          dates: '05/01/21 - 05/03/21'
+          dates: '05/01/21 - 05/03/21',
+          color: 'red-line'
         },
         {
           name: 'Nicia',
@@ -1624,6 +1644,19 @@ export default {
       this.close()
     }
     ,
+
+    itemRowBackground: function (item) {
+      return item.name === 'Nicolette' ? 'style-1' : ''
+    }
   },
 }
 </script>
+<style>
+.style-1 {
+  background-color: #fb8c00
+}
+
+.style-2 {
+  background-color: rgb(114, 114, 67)
+}
+</style>

@@ -24,7 +24,7 @@
                 <v-text-field
                         v-model="password"
                         :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
-                        :type="show1 ? 'text' : 'password'"
+                        :type="show1 ? 'text' : 'password:'"
                         name="input-10-1"
                         label="Password"
                         hint="At least 8 characters"
@@ -34,7 +34,14 @@
                 <br>
                 Coaching styles
                 <v-divider></v-divider>
-
+                <v-select
+                        v-model="value"
+                        :items="items"
+                        attach
+                        chips
+                        label="Specialities"
+                        multiple
+                ></v-select>
             </v-col>
         </v-row>
 
@@ -46,6 +53,9 @@
 
     export default {
         name: 'Profile',
-        components: {}
+        components: {},
+        data: () => ({
+            items: ["Style1", "Style2", "Style3", "Style4"]
+        })
     }
 </script>

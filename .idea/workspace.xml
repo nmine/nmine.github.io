@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a352a796-daf2-46f8-bbec-9139837b2eee" name="Default Changelist" comment="Create project stepper , validation participants &#10;&#10;Add &#10;- alert with message &#10;- color row table&#10;&#10;Update Vuetify version">
+    <list default="true" id="a352a796-daf2-46f8-bbec-9139837b2eee" name="Default Changelist" comment="Create project stepper , overview project&#10;&#10;Add &#10;- overview project&#10;&#10;Update Vuetify version">
+      <change afterPath="$PROJECT_DIR$/documentation/catalogue.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/participants.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/project.calendar.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/creationProject/CreateProjectStepper.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/creationProject/CreateProjectStepper.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +38,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/documentation" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -46,10 +48,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Cucumber" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/documentation" />
       <recent name="$PROJECT_DIR$/src/views" />
       <recent name="$PROJECT_DIR$/src/components/creationProject" />
     </key>
@@ -267,7 +270,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612787601603</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Create project stepper , overview project&#10;&#10;Add &#10;- overview project&#10;&#10;Update Vuetify version">
+      <created>1612790179420</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1612790179420</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Create project stepper , overview project&#10;&#10;Add &#10;- overview project&#10;&#10;Update Vuetify version">
+      <created>1612790236269</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1612790236269</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +319,8 @@
     <MESSAGE value="Add project and Profile.vue" />
     <MESSAGE value="project page &#10;&#10;Add &#10;- Sponsor role componenet&#10;- Project Milestone" />
     <MESSAGE value="Create project stepper , validation participants &#10;&#10;Add &#10;- alert with message &#10;- color row table&#10;&#10;Update Vuetify version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create project stepper , validation participants &#10;&#10;Add &#10;- alert with message &#10;- color row table&#10;&#10;Update Vuetify version" />
+    <MESSAGE value="Create project stepper , overview project&#10;&#10;Add &#10;- overview project&#10;&#10;Update Vuetify version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create project stepper , overview project&#10;&#10;Add &#10;- overview project&#10;&#10;Update Vuetify version" />
   </component>
   <component name="masterDetails">
     <states>

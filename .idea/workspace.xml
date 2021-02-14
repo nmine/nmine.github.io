@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a352a796-daf2-46f8-bbec-9139837b2eee" name="Default Changelist" comment="Create project stepper , overview project&#10;&#10;Add &#10;- overview project&#10;&#10;Update Vuetify version">
-      <change afterPath="$PROJECT_DIR$/documentation/catalogue.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/participants.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/project.calendar.feature" afterDir="false" />
+    <list default="true" id="a352a796-daf2-46f8-bbec-9139837b2eee" name="Default Changelist" comment="Add documentation (features file)">
+      <change afterPath="$PROJECT_DIR$/documentation/basket.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/coach.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/sponsor.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/trainee.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/validation.participant.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/catalogue.feature" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/catalogue.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,17 +61,6 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.build">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -284,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612790236269</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Add documentation (features file)">
+      <created>1613058566034</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1613058566035</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,7 +319,8 @@
     <MESSAGE value="project page &#10;&#10;Add &#10;- Sponsor role componenet&#10;- Project Milestone" />
     <MESSAGE value="Create project stepper , validation participants &#10;&#10;Add &#10;- alert with message &#10;- color row table&#10;&#10;Update Vuetify version" />
     <MESSAGE value="Create project stepper , overview project&#10;&#10;Add &#10;- overview project&#10;&#10;Update Vuetify version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create project stepper , overview project&#10;&#10;Add &#10;- overview project&#10;&#10;Update Vuetify version" />
+    <MESSAGE value="Add documentation (features file)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add documentation (features file)" />
   </component>
   <component name="masterDetails">
     <states>

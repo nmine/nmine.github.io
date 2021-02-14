@@ -48,20 +48,7 @@ Feature: Basket overview
     Then I see the picture, name and certification of 'persona1'
     Then I see the picture, name and certification of 'persona2'
 
-Feature: coah profile
-  As a product leader
-  I want to see coach profile
-  In order to have more infos on this coach
-
-  Scenario: the project leader go the more page
-    Given the project is created wit the coaches 'persona1'
-    When I go to the catalogue
-    And I selecte the coach 'persona1'
-    And I go to his profile
-    #quoi afficher dans profile
-    Then I see the picture, name  certification, specialities... of 'persona1'
-
-Feature: number of oach selected
+Feature: number of coach selected
   As a product leader
   I want to see how many coach I have already selected
   In order to know if I can add some
@@ -82,14 +69,3 @@ Feature: hint on coach/trainee
     When I go to the catalogue
     #triggered after selectinf coaches or always
     Then  I see the hint coach/trainee
-
-Feature: add coach to the basket
-  As an project leader
-  I want to add a coach to the basket
-  In order to complete all the coach for the project
-
-  Scenario: the project leader add a coach to the basket
-    Given the project is created wit the coaches 'persona1'
-    When I go to the catalogue
-    And I select 'persona1'
-    Then 'persona1' is addded to the basket

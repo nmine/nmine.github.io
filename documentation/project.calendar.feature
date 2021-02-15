@@ -2,15 +2,16 @@ Feature: Select Project dates
   As a product leader
   I want to choose project dates
   In order to know when project start and end
-  Scenario: Select Project end date
-    Given the project is created
-    When I select 01/01/2022 as project end date
-    Then the project should end the 01/01/2022
-
+  
   Scenario: Select Project start date
     Given the project is created
     When I select 01/01/2021 as project start date
     Then the project should start the 01/01/2021
+    
+  Scenario: Select Project end date
+    Given the project is created
+    When I select 01/01/2022 as project end date
+    Then the project should end the 01/01/2022
 
 Feature: Create project milestone
   As a product leader

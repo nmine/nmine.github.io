@@ -112,6 +112,14 @@
                 md="6"
             >
               <v-btn>Add Milestone</v-btn>
+              <v-select
+                  v-model="value"
+                  :items="items"
+                  attach
+                  chips
+                  label="Cohorts"
+                  multiple
+              ></v-select>
             </v-col>
             <v-col
                 cols="12"
@@ -632,6 +640,20 @@
                                   v-model="newTrainee.credit"
                                   label="Credit"
                               ></v-text-field>
+                            </v-col>
+                            <v-col
+                                cols="12"
+                                sm="6"
+                                md="4"
+                            >
+                              <v-select
+                                  v-model="value"
+                                  :items="items"
+                                  attach
+                                  chips
+                                  label="Cohorts"
+                                  multiple
+                              ></v-select>
                             </v-col>
                           </v-row>
                           <v-row>

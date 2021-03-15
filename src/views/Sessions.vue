@@ -11,7 +11,7 @@
                         v-bind="attrs"
                         v-on="on"
                 >
-                    New Trainee
+                    Create Session
                 </v-btn>
             </template>
             <v-card>
@@ -54,15 +54,9 @@
                                               :items="items"
                                               attach
                                               chips
-                                              label="Specialities"
+                                              label="objectifs"
                                               multiple
                                           ></v-select>
-                                        </v-row>
-                                        <v-row>
-                                            <v-switch
-                                                    v-model="switch1"
-                                                    label="Notify Observers"
-                                            ></v-switch>
                                         </v-row>
                                     </v-container>
                                     <v-btn

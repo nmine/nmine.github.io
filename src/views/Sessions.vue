@@ -49,12 +49,14 @@
                                 <v-stepper-content step="1">
                                     <v-container>
                                         <v-row>
-                                            <v-select
-                                                    v-model="value"
-                                                    :items="items"
-                                                    attach
-                                                    label="Objectifs"
-                                            ></v-select>
+                                          <v-select
+                                              v-model="value"
+                                              :items="items"
+                                              attach
+                                              chips
+                                              label="Specialities"
+                                              multiple
+                                          ></v-select>
                                         </v-row>
                                         <v-row>
                                             <v-switch

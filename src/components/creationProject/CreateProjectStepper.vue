@@ -1286,6 +1286,7 @@ export default {
       {text: 'Email', value: 'email'},
       {text: 'Credit', value: 'credit'},
       {text: 'Dates begin/end', value: 'dates'},
+      {text: 'cohort', value: 'email'},
       {text: 'Actions', value: 'actions', sortable: false},
       {text: '', value: 'data-table-expand'}
     ],

@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import CreateProjectStepper from "../components/creationProject/CreateProjectStepper";
 import Home from "../views/Home";
-import IDP from "../views/IDP";
+import IDP from "../views/Objectifs";
 import Sessions from "../views/Sessions";
 import Profile from "../views/Profile";
 import Project from "../views/Project";

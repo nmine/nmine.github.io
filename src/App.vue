@@ -79,10 +79,11 @@
             profilePath : '/profile',
             items: [
                 { title: 'Home', icon: 'mdi-view-dashboard', path: '/'},
-                { title: 'IDP', icon: 'mdi-image' , path: '/idp'},
+                { title: 'Objectifs', icon: 'mdi-image' , path: '/idp'},
                 { title: 'Sessions', icon: 'mdi-help-box' , path: '/sessions'},
-                { title: 'ProjectsCreation', icon: 'mdi-view-dashboard', path: '/projectsCreation'},
                 { title: 'Project', icon: 'mdi-view-dashboard', path: '/project'},
+                { title: 'Diary', icon: 'mdi-view-dashboard', path: '/diary'},
+                { title: 'External Support', icon: 'mdi-view-dashboard', path: '/externalsupport'},
             ],
             right: null,
         }),

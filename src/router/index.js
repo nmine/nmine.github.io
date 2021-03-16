@@ -6,6 +6,8 @@ import IDP from "../views/IDP";
 import Sessions from "../views/Sessions";
 import Profile from "../views/Profile";
 import Project from "../views/Project";
+import Diary from "@/views/Diary";
+import ExternalSupport from "@/views/ExternalSupport";
 
 Vue.use(VueRouter)
 
@@ -39,6 +41,16 @@ const routes = [
         path: '/project',
         name: 'Project',
         component: Project
+    },
+    {
+        path: '/diary',
+        name: 'Diary',
+        component: Diary
+    },
+    {
+        path: '/externalsupport',
+        name: 'External Support',
+        component: ExternalSupport
     }
 ]
 

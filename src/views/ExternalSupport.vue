@@ -17,10 +17,13 @@
             >
 
               <v-list-item-content>
-                <v-col cols="5">
+                <v-col cols="4">
                   {{ item.title }} {{ item.email }}
                 </v-col>
-                <v-col cols="7">
+                <v-col cols="4">
+                  <v-btn class="primary">Demander Feedback</v-btn>
+                </v-col>
+                <v-col cols="4">
                   <v-select
                       v-model="value"
                       :items="items"

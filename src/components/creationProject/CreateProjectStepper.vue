@@ -111,7 +111,8 @@
                 sm="6"
                 md="6"
             >
-              <v-btn>Add Milestone</v-btn>
+              <v-btn>Add Event</v-btn>
+              A la creation spécifier si event est optional ou mandatory
               <v-select
                   v-model="value"
                   :items="items"
@@ -120,6 +121,8 @@
                   label="Cohorts"
                   multiple
               ></v-select>
+              Nombre d'event a choisir<br/>
+              Type event a la creation : Conference, Workshop...
             </v-col>
             <v-col
                 cols="12"
@@ -1167,6 +1170,24 @@
             <v-checkbox
                 v-model="checkbox1"
                 label="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetu"
+            ></v-checkbox>
+          </v-row>
+          <v-row>
+            <v-checkbox
+                v-model="checkbox1"
+                label="Sponsor peut acceder aux objectifs du Trainee"
+            ></v-checkbox>
+          </v-row>
+          <v-row>
+            <v-checkbox
+                v-model="checkbox1"
+                label="Objectif du Trainee doivent etre validé par le Sponsor"
+            ></v-checkbox>
+          </v-row>
+          <v-row>
+            <v-checkbox
+                v-model="checkbox1"
+                label="Sponsor peut voir la page Progress du Trainee"
             ></v-checkbox>
           </v-row>
 

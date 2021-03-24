@@ -1,10 +1,12 @@
 <template>
   <v-container>
+
     <v-col cols="12">
+      <v-btn class="mb-5">Create Objectif</v-btn>
       <v-expansion-panels>
         <v-expansion-panel>
           <v-expansion-panel-header>
-            Objectif1
+            Objectif1  Description Score.. To be validated by Sponsor
           </v-expansion-panel-header>
           <v-expansion-panel-content>
             <v-col cols="12">
@@ -40,7 +42,7 @@
                     <v-row>
                       <v-col cols="12">
                         <v-text-field
-                            label="Benefits"
+                            label="Desired Outcome"
                             required
                         ></v-text-field>
                       </v-col>
@@ -141,7 +143,7 @@
         </v-expansion-panel>
         <v-expansion-panel>
           <v-expansion-panel-header>
-            Objectif2
+            Objectif2 description score
           </v-expansion-panel-header>
           <v-expansion-panel-content>
             <v-col cols="12">
@@ -179,7 +181,7 @@
                           cols="12"
                       >
                         <v-text-field
-                            label="Benefits"
+                            label="Desired Outcome"
                             required
                         ></v-text-field>
                       </v-col>
@@ -237,7 +239,7 @@
         </v-expansion-panel>
         <v-expansion-panel>
           <v-expansion-panel-header>
-            Objectif3
+            Objectif3 description score
           </v-expansion-panel-header>
           <v-expansion-panel-content>
             <v-col cols="12">
@@ -275,7 +277,7 @@
                           cols="12"
                       >
                         <v-text-field
-                            label="Benefits"
+                            label="Desired Outcome"
                             required
                         ></v-text-field>
                       </v-col>

@@ -9,6 +9,7 @@ import Project from "../views/Project";
 import Diary from "@/views/Diary";
 import ExternalSupport from "@/views/ExternalSupport";
 import Progress from "@/views/Progress";
+import ExternalSupportFeedBack from "@/views/ExternalSupportFeedBack";
 
 Vue.use(VueRouter)
 
@@ -57,6 +58,11 @@ const routes = [
         path: '/progress',
         name: 'Progress',
         component: Progress
+    },
+    {
+        path: '/externalsupportfeedback',
+        name: 'ExternalSupportFeedback',
+        component: ExternalSupportFeedBack
     }
 ]
 

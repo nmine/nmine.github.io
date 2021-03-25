@@ -8,6 +8,7 @@ import Profile from "../views/Profile";
 import Project from "../views/Project";
 import Diary from "@/views/Diary";
 import ExternalSupport from "@/views/ExternalSupport";
+import Progress from "@/views/Progress";
 
 Vue.use(VueRouter)
 
@@ -51,6 +52,11 @@ const routes = [
         path: '/externalsupport',
         name: 'External Support',
         component: ExternalSupport
+    },
+    {
+        path: '/progress',
+        name: 'Progress',
+        component: Progress
     }
 ]
 

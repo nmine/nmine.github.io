@@ -58,6 +58,26 @@
                                               multiple
                                           ></v-select>
                                         </v-row>
+                                      <v-row>
+                                        <v-select
+                                            v-model="value"
+                                            :items="items"
+                                            attach
+                                            chips
+                                            label="Invite supports"
+                                            multiple
+                                        ></v-select>
+                                      </v-row>
+                                      <v-row>
+                                        <v-select
+                                            v-model="value"
+                                            :items="items"
+                                            attach
+                                            chips
+                                            label="Invite External support"
+                                            multiple
+                                        ></v-select>
+                                      </v-row>
                                     </v-container>
                                     <v-btn
                                             color="primary"

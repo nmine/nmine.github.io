@@ -18,6 +18,16 @@
                           cols="12"
                       >
                         <v-text-field
+                            label="Name"
+                            required
+                        ></v-text-field>
+                      </v-col>
+                    </v-row>
+                    <v-row>
+                      <v-col
+                          cols="12"
+                      >
+                        <v-text-field
                             label="Description"
                             required
                         ></v-text-field>
@@ -28,7 +38,7 @@
                           cols="12"
                       >
                         <v-slider
-                            label="Self assessment"
+                            label="Self assessment de depart"
                             :tick-labels="seasons"
                             min="0"
                             max="10"
@@ -146,6 +156,16 @@
             Objectif2 description score
           </v-expansion-panel-header>
           <v-expansion-panel-content>
+            <v-row>
+              <v-col
+                  cols="12"
+              >
+                <v-text-field
+                    label="Description"
+                    required
+                ></v-text-field>
+              </v-col>
+            </v-row>
             <v-col cols="12">
               <v-card>
                 <v-card-text>
@@ -165,7 +185,7 @@
                           cols="12"
                       >
                         <v-slider
-                            label="Self assessment"
+                            label="Self assessment de depart"
                             :tick-labels="seasons"
                             min="0"
                             max="10"
@@ -260,8 +280,18 @@
                       <v-col
                           cols="12"
                       >
+                        <v-text-field
+                            label="Description"
+                            required
+                        ></v-text-field>
+                      </v-col>
+                    </v-row>
+                    <v-row>
+                      <v-col
+                          cols="12"
+                      >
                         <v-slider
-                            label="Self assessment"
+                            label="Self assessment de depart"
                             :tick-labels="seasons"
                             min="0"
                             max="10"

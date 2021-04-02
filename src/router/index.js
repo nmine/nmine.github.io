@@ -5,7 +5,6 @@ import Home from "../views/Home";
 import IDP from "../views/Objectifs";
 import Sessions from "../views/Sessions";
 import Profile from "../views/Profile";
-import Project from "../views/Project";
 import Diary from "@/views/Diary";
 import ExternalSupport from "@/views/ExternalSupport";
 import Progress from "@/views/Progress";
@@ -38,11 +37,6 @@ const routes = [
         path: '/profile',
         name: 'Profile',
         component: Profile
-    },
-    {
-        path: '/project',
-        name: 'Project',
-        component: Project
     },
     {
         path: '/diary',

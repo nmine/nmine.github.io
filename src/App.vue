@@ -84,7 +84,6 @@
                 { title: 'Diary', icon: 'mdi-view-dashboard', path: '/diary'},
                 { title: 'Progress', icon: 'mdi-view-dashboard', path: '/progress'},
                 { title: 'External Support', icon: 'mdi-view-dashboard', path: '/externalsupport'},
-                { title: 'Project', icon: 'mdi-view-dashboard', path: '/project'},
                 { title: 'External Support Feedback', icon: 'mdi-view-dashboard', path: '/externalsupportfeedback   '},
             ],
             right: null,

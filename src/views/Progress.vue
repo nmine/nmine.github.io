@@ -25,6 +25,8 @@
               >
               </v-slider>
             </v-col>
+            Progress
+            Quand on change score -> dialog avec form date, Examples qui illustre votre progression, Qu’est ce qui vous permettrait d’aller encore plus loin
             <v-simple-table>
               <template v-slot:default>
                 <thead>
@@ -33,10 +35,10 @@
                     Date
                   </th>
                   <th class="text-left">
-                    External Sponsor
+                    Examples qui illustre votre progression
                   </th>
                   <th class="text-left">
-                    Description
+                    Qu’est ce qui vous permettrait d’aller encore plus loin
                   </th>
                 </tr>
                 </thead>
@@ -46,28 +48,6 @@
                     :key="item.name"
                 >
                   <td>{{ item.name }}</td>
-                  <td>{{ item.description }}</td>
-                </tr>
-                </tbody>
-              </template>
-            </v-simple-table>
-            <v-simple-table>
-              <template v-slot:default>
-                <thead>
-                <tr>
-                  <th class="text-left">
-                    Date
-                  </th>
-                  <th class="text-left">
-                    Example
-                  </th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr
-                    v-for="item in desserts"
-                    :key="item.name"
-                >
                   <td>{{ item.name }}</td>
                   <td>{{ item.description }}</td>
                 </tr>
@@ -97,6 +77,8 @@
               >
               </v-slider>
             </v-col>
+            Progress
+            Quand on change score -> dialog avec form date, Examples qui illustre votre progression, Qu’est ce qui vous permettrait d’aller encore plus loin
             <v-simple-table>
               <template v-slot:default>
                 <thead>
@@ -105,10 +87,10 @@
                     Date
                   </th>
                   <th class="text-left">
-                    External Sponsor
+                    Examples qui illustre votre progression
                   </th>
                   <th class="text-left">
-                    Description
+                    Qu’est ce qui vous permettrait d’aller encore plus loin
                   </th>
                 </tr>
                 </thead>
@@ -118,28 +100,6 @@
                     :key="item.name"
                 >
                   <td>{{ item.name }}</td>
-                  <td>{{ item.description }}</td>
-                </tr>
-                </tbody>
-              </template>
-            </v-simple-table>
-            <v-simple-table>
-              <template v-slot:default>
-                <thead>
-                <tr>
-                  <th class="text-left">
-                    Date
-                  </th>
-                  <th class="text-left">
-                    Example
-                  </th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr
-                    v-for="item in desserts"
-                    :key="item.name"
-                >
                   <td>{{ item.name }}</td>
                   <td>{{ item.description }}</td>
                 </tr>
@@ -169,6 +129,8 @@
               >
               </v-slider>
             </v-col>
+            Progress
+            Quand on change score -> dialog avec form date, Examples qui illustre votre progression, Qu’est ce qui vous permettrait d’aller encore plus loin
             <v-simple-table>
               <template v-slot:default>
                 <thead>
@@ -177,10 +139,10 @@
                     Date
                   </th>
                   <th class="text-left">
-                    External Sponsor
+                    Examples qui illustre votre progression
                   </th>
                   <th class="text-left">
-                    Description
+                    Qu’est ce qui vous permettrait d’aller encore plus loin
                   </th>
                 </tr>
                 </thead>
@@ -190,28 +152,6 @@
                     :key="item.name"
                 >
                   <td>{{ item.name }}</td>
-                  <td>{{ item.description }}</td>
-                </tr>
-                </tbody>
-              </template>
-            </v-simple-table>
-            <v-simple-table>
-              <template v-slot:default>
-                <thead>
-                <tr>
-                  <th class="text-left">
-                    Date
-                  </th>
-                  <th class="text-left">
-                    Example
-                  </th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr
-                    v-for="item in desserts"
-                    :key="item.name"
-                >
                   <td>{{ item.name }}</td>
                   <td>{{ item.description }}</td>
                 </tr>

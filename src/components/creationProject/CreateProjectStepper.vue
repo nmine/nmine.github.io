@@ -137,75 +137,6 @@
             </v-col>
           </v-row>
           <v-row class="pa-5">
-            <v-data-table
-                :items="sponsorRoles"
-                :headers="headerSponsorRoles"
-                :items-per-page="5"
-                item-key="name"
-                class="elevation-1"
-                :hide-default-footer="true">
-              <template v-slot:top>
-                <v-toolbar
-                    flat
-                >
-                  <v-toolbar-title>Sponsore Roles</v-toolbar-title>
-                  <v-divider
-                      class="mx-4"
-                      inset
-                      vertical
-                  ></v-divider>
-                  <v-spacer></v-spacer>
-                  <v-dialog
-                      v-model="dialog"
-                      max-width="500px"
-                  >
-                    <template v-slot:activator="{ on, attrs }">
-                      <v-btn
-                          class="mb-2"
-                          v-bind="attrs"
-                          v-on="on"
-                      >
-                        Create Role
-                      </v-btn>
-                    </template>
-                  </v-dialog>
-                </v-toolbar>
-              </template>
-              <template v-slot:item.chosen="{ item }">
-                <v-simple-checkbox
-                    v-model="item.chosen"
-                ></v-simple-checkbox>
-              </template>
-
-              <template v-slot:item.definition="props">
-                <v-edit-dialog
-                    :return-value.sync="props.item.definition"
-                    large
-                    persistent
-                    @save="save"
-                    @cancel="cancel"
-                    @open="open"
-                    @close="close"
-                >
-                  <div>{{ props.item.definition }}</div>
-                  <template v-slot:input>
-                    <div class="mt-4 title">
-                      Update Iron
-                    </div>
-                    <v-text-field
-                        v-model="props.item.definition"
-                        :rules="[max25chars]"
-                        label="Edit"
-                        single-line
-                        counter
-                        autofocus
-                    ></v-text-field>
-                  </template>
-                </v-edit-dialog>
-              </template>
-            </v-data-table>
-          </v-row>
-          <v-row class="pa-5">
             <v-slider
                 v-model="value"
                 :rules="rules"
@@ -550,6 +481,73 @@
 
 
       <v-stepper-content step="4">
+        <v-data-table
+            :items="sponsorRoles"
+            :headers="headerSponsorRoles"
+            :items-per-page="5"
+            item-key="name"
+            class="elevation-1"
+            :hide-default-footer="true">
+          <template v-slot:top>
+            <v-toolbar
+                flat
+            >
+              <v-toolbar-title>Competence</v-toolbar-title>
+              <v-divider
+                  class="mx-4"
+                  inset
+                  vertical
+              ></v-divider>
+              <v-spacer></v-spacer>
+              <v-dialog
+                  v-model="dialog"
+                  max-width="500px"
+              >
+                <template v-slot:activator="{ on, attrs }">
+                  <v-btn
+                      class="mb-2"
+                      v-bind="attrs"
+                      v-on="on"
+                  >
+                    Create Role
+                  </v-btn>
+                </template>
+              </v-dialog>
+            </v-toolbar>
+          </template>
+          <template v-slot:item.chosen="{ item }">
+            <v-simple-checkbox
+                v-model="item.chosen"
+            ></v-simple-checkbox>
+          </template>
+
+          <template v-slot:item.definition="props">
+            <v-edit-dialog
+                :return-value.sync="props.item.definition"
+                large
+                persistent
+                @save="save"
+                @cancel="cancel"
+                @open="open"
+                @close="close"
+            >
+              <div>{{ props.item.definition }}</div>
+              <template v-slot:input>
+                <div class="mt-4 title">
+                  Update Iron
+                </div>
+                <v-text-field
+                    v-model="props.item.definition"
+                    :rules="[max25chars]"
+                    label="Edit"
+                    single-line
+                    counter
+                    autofocus
+                ></v-text-field>
+              </template>
+            </v-edit-dialog>
+          </template>
+        </v-data-table>
         <v-row>
           <v-col cols="12" sm="12">
             <v-data-table
@@ -801,6 +799,75 @@
       </v-stepper-content>
 
       <v-stepper-content step="5">
+        <v-row>
+          <v-data-table
+              :items="sponsorRoles"
+              :headers="headerSponsorRoles"
+              :items-per-page="5"
+              item-key="name"
+              class="elevation-1"
+              :hide-default-footer="true">
+            <template v-slot:top>
+              <v-toolbar
+                  flat
+              >
+                <v-toolbar-title>Sponsore Roles</v-toolbar-title>
+                <v-divider
+                    class="mx-4"
+                    inset
+                    vertical
+                ></v-divider>
+                <v-spacer></v-spacer>
+                <v-dialog
+                    v-model="dialog"
+                    max-width="500px"
+                >
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn
+                        class="mb-2"
+                        v-bind="attrs"
+                        v-on="on"
+                    >
+                      Create Role
+                    </v-btn>
+                  </template>
+                </v-dialog>
+              </v-toolbar>
+            </template>
+            <template v-slot:item.chosen="{ item }">
+              <v-simple-checkbox
+                  v-model="item.chosen"
+              ></v-simple-checkbox>
+            </template>
+
+            <template v-slot:item.definition="props">
+              <v-edit-dialog
+                  :return-value.sync="props.item.definition"
+                  large
+                  persistent
+                  @save="save"
+                  @cancel="cancel"
+                  @open="open"
+                  @close="close"
+              >
+                <div>{{ props.item.definition }}</div>
+                <template v-slot:input>
+                  <div class="mt-4 title">
+                    Update Iron
+                  </div>
+                  <v-text-field
+                      v-model="props.item.definition"
+                      :rules="[max25chars]"
+                      label="Edit"
+                      single-line
+                      counter
+                      autofocus
+                  ></v-text-field>
+                </template>
+              </v-edit-dialog>
+            </template>
+          </v-data-table>
+        </v-row>
         <v-row>
           <v-col cols="12" sm="12">
             <v-data-table

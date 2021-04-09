@@ -1,44 +1,55 @@
 <template>
   <v-stepper v-model="e1">
     <v-stepper-header>
+      <v-stepper-step step="1" editable>Learning journey (all)</v-stepper-step>
 
-      <v-stepper-step step="1" editable>Project setup</v-stepper-step>
+      <v-divider></v-divider>
+
+      <v-stepper-step step="2" editable>Project setup(all)</v-stepper-step>
 
       <v-divider></v-divider>
 
       <v-stepper-step
           :complete="e1 > 2"
-          step="2"
+          step="3"
           editable
       >
-        Coach Catalogue
+        Coach Catalogue (IndC)
       </v-stepper-step>
 
       <v-divider></v-divider>
 
-      <v-stepper-step step="3" editable>
-        Coach Basket
+      <v-stepper-step step="4" editable>
+        Coach Basket (IndC)
       </v-stepper-step>
 
       <v-divider></v-divider>
 
-      <v-stepper-step step="4" editable>Trainee</v-stepper-step>
+      <v-stepper-step step="5" editable>Trainee (all)</v-stepper-step>
 
       <v-divider></v-divider>
 
-      <v-stepper-step step="5" editable>Sponsors</v-stepper-step>
+      <v-stepper-step step="6" editable>Sponsors(indC)</v-stepper-step>
 
       <v-divider></v-divider>
 
-      <v-stepper-step step="6" editable>Validation Participant</v-stepper-step>
+      <v-stepper-step step="7" editable>Validation Participant (all)</v-stepper-step>
 
       <v-divider></v-divider>
 
-      <v-stepper-step step="7" editable>Specificities</v-stepper-step>
+      <v-stepper-step step="8" editable>Psychometric (psy)</v-stepper-step>
 
       <v-divider></v-divider>
 
-      <v-stepper-step step="8" editable>Overview</v-stepper-step>
+      <v-stepper-step step="9" editable>Collective (coll)</v-stepper-step>
+
+      <v-divider></v-divider>
+
+      <v-stepper-step step="10" editable>Specificities (all)</v-stepper-step>
+
+      <v-divider></v-divider>
+
+      <v-stepper-step step="11" editable>Overview (all)</v-stepper-step>
 
     </v-stepper-header>
 
@@ -46,6 +57,108 @@
       <v-stepper-content step="1">
         <v-container>
           <v-row class="pa-5">
+            <v-col
+                cols="12"
+            >
+              <v-btn @click="e1 = 2">Individual approach</v-btn>
+            </v-col>
+            <v-col
+                cols="12"
+            >
+              <v-btn @click="e1 = 2">Collective approach</v-btn>
+            </v-col>
+            <v-col
+                cols="12"
+            >
+              <v-btn @click="e1 = 2">Integrated (combination of individual & collective approach)</v-btn>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-stepper-content>
+      <v-stepper-content step="2">
+        <v-container>
+          <v-row class="pa-5">
+            <v-col
+                cols="12"
+            >
+              <v-data-table
+                  :items="sponsorRoles"
+                  :headers="headerSponsorRoles"
+                  :items-per-page="5"
+                  item-key="name"
+                  class="elevation-1"
+                  :hide-default-footer="true">
+                <template v-slot:top>
+                  <v-toolbar
+                      flat
+                  >
+                    <v-toolbar-title>Competence</v-toolbar-title>
+                    <v-divider
+                        class="mx-4"
+                        inset
+                        vertical
+                    ></v-divider>
+                    <v-spacer></v-spacer>
+                    <v-dialog
+                        v-model="dialog"
+                        max-width="500px"
+                    >
+                      <template v-slot:activator="{ on, attrs }">
+                        <v-btn
+                            class="mb-2"
+                            v-bind="attrs"
+                            v-on="on"
+                        >
+                          Create Role
+                        </v-btn>
+                      </template>
+                    </v-dialog>
+                  </v-toolbar>
+                </template>
+                <template v-slot:item.chosen="{ item }">
+                  <v-simple-checkbox
+                      v-model="item.chosen"
+                  ></v-simple-checkbox>
+                </template>
+
+                <template v-slot:item.definition="props">
+                  <v-edit-dialog
+                      :return-value.sync="props.item.definition"
+                      large
+                      persistent
+                      @save="save"
+                      @cancel="cancel"
+                      @open="open"
+                      @close="close"
+                  >
+                    <div>{{ props.item.definition }}</div>
+                    <template v-slot:input>
+                      <div class="mt-4 title">
+                        Update Iron
+                      </div>
+                      <v-text-field
+                          v-model="props.item.definition"
+                          :rules="[max25chars]"
+                          label="Edit"
+                          single-line
+                          counter
+                          autofocus
+                      ></v-text-field>
+                    </template>
+                  </v-edit-dialog>
+                </template>
+              </v-data-table>
+            </v-col>
+            <v-col cols="12">
+              <v-text-field
+                  label="Project name"
+              ></v-text-field>
+            </v-col>
+            <v-col cols="12">
+              <v-text-field
+                  label="Company name"
+              ></v-text-field>
+            </v-col>
             <v-col
                 cols="12"
                 sm="6"
@@ -106,35 +219,123 @@
             </v-col>
           </v-row>
           <v-row class="pa-5">
-            <v-col
-                cols="12"
-                sm="6"
-                md="6"
-            >
-              <v-btn>Add Event</v-btn>
-              A la creation spécifier si event est optional ou mandatory
-              <v-select
-                  v-model="value"
-                  :items="items"
-                  attach
-                  chips
-                  label="Cohorts"
-                  multiple
-              ></v-select>
-              Nombre d'event a choisir<br/>
-              Type event a la creation : Conference, Workshop...
-            </v-col>
-            <v-col
-                cols="12"
-                sm="6"
-                md="6"
-            >
-              <v-date-picker
-                  v-model="date2"
-                  :event-color="date => date[9] % 2 ? 'red' : 'yellow'"
-                  :events="functionEvents"
-              ></v-date-picker>
-            </v-col>
+            <v-expansion-panels>
+              <v-expansion-panel>
+                <v-expansion-panel-header>
+                  Event : Collective journey
+                </v-expansion-panel-header>
+                <v-expansion-panel-content>
+                  <v-col
+                      cols="12"
+                      sm="6"
+                      md="6"
+                  >
+                    <v-data-table
+                        :items="events"
+                        :headers="eventsHeader"
+                        :items-per-page="5"
+                        item-key="name"
+                        class="elevation-1"
+                        :hide-default-footer="true">
+                      <template v-slot:top>
+                        <v-toolbar
+                            flat
+                        >
+                          <v-toolbar-title>Select the type of events you want to integrate in the journey</v-toolbar-title>
+                        </v-toolbar>
+                      </template>
+                      <template v-slot:item.chosen="{ item }">
+                        <v-simple-checkbox
+                            v-model="item.chosen"
+                        ></v-simple-checkbox>
+                      </template>
+                    </v-data-table>
+<!--                    <v-btn>Add Event</v-btn>-->
+<!--                    A la creation spécifier si event est optional ou mandatory-->
+<!--                    <v-select-->
+<!--                        v-model="value"-->
+<!--                        :items="items"-->
+<!--                        attach-->
+<!--                        chips-->
+<!--                        label="Cohorts"-->
+<!--                        multiple-->
+<!--                    ></v-select>-->
+<!--                    <v-select-->
+<!--                        v-model="value"-->
+<!--                        :items="eventTypes"-->
+<!--                        label="Event type"-->
+<!--                    ></v-select>-->
+<!--                    Nombre d'event a choisir<br/>-->
+                  </v-col>
+<!--                  <v-col-->
+<!--                      cols="12"-->
+<!--                      sm="6"-->
+<!--                      md="6"-->
+<!--                  >-->
+<!--                    <v-date-picker-->
+<!--                        v-model="date2"-->
+<!--                        :event-color="date => date[9] % 2 ? 'red' : 'yellow'"-->
+<!--                        :events="functionEvents"-->
+<!--                    ></v-date-picker>-->
+<!--                  </v-col>-->
+                </v-expansion-panel-content>
+              </v-expansion-panel>
+            </v-expansion-panels>
+          </v-row>
+          <v-row class="pa-5">
+            <v-expansion-panels>
+              <v-expansion-panel>
+                <v-expansion-panel-header>
+                  Individual coaching
+                </v-expansion-panel-header>
+                <v-expansion-panel-content>
+                  <v-col
+                      cols="12"
+                      sm="6"
+                      md="6"
+                  >
+                    <v-text-field
+                        :counter="50"
+                        label="Nombre des session"
+                        required
+                    ></v-text-field>
+                  </v-col>
+                  <v-col
+                      cols="12"
+                      sm="6"
+                      md="6"
+                  >
+                    <v-select
+                        v-model="value"
+                        :items="durations"
+                        label="Durée de la session"
+                    ></v-select>
+                  </v-col>
+                  <v-col
+                      cols="12"
+                      sm="6"
+                      md="6"
+                  >
+                    <v-select
+                        v-model="value"
+                        :items="frequencies"
+                        label="Frequence"
+                    ></v-select>
+                  </v-col>
+                  <v-col
+                      cols="12"
+                      sm="6"
+                      md="6"
+                  >
+                    <v-select
+                        v-model="value"
+                        :items="questionnaires"
+                        label="Questionnaires"
+                    ></v-select>
+                  </v-col>
+                </v-expansion-panel-content>
+              </v-expansion-panel>
+            </v-expansion-panels>
           </v-row>
           <v-row class="pa-5">
             <v-slider
@@ -156,7 +357,7 @@
         </v-container>
       </v-stepper-content>
 
-      <v-stepper-content step="2">
+      <v-stepper-content step="3">
         <v-container fluid class="grey lighten-5">
           <v-row no-gutters>
             <v-col :key="2" cols="12" lg="12">
@@ -424,7 +625,7 @@
           Continue
         </v-btn>
       </v-stepper-content>
-      <v-stepper-content step="3">
+      <v-stepper-content step="4">
         <v-card>
           <v-row>
             <v-col md="3" class="pa-10">
@@ -480,74 +681,7 @@
       </v-stepper-content>
 
 
-      <v-stepper-content step="4">
-        <v-data-table
-            :items="sponsorRoles"
-            :headers="headerSponsorRoles"
-            :items-per-page="5"
-            item-key="name"
-            class="elevation-1"
-            :hide-default-footer="true">
-          <template v-slot:top>
-            <v-toolbar
-                flat
-            >
-              <v-toolbar-title>Competence</v-toolbar-title>
-              <v-divider
-                  class="mx-4"
-                  inset
-                  vertical
-              ></v-divider>
-              <v-spacer></v-spacer>
-              <v-dialog
-                  v-model="dialog"
-                  max-width="500px"
-              >
-                <template v-slot:activator="{ on, attrs }">
-                  <v-btn
-                      class="mb-2"
-                      v-bind="attrs"
-                      v-on="on"
-                  >
-                    Create Role
-                  </v-btn>
-                </template>
-              </v-dialog>
-            </v-toolbar>
-          </template>
-          <template v-slot:item.chosen="{ item }">
-            <v-simple-checkbox
-                v-model="item.chosen"
-            ></v-simple-checkbox>
-          </template>
-
-          <template v-slot:item.definition="props">
-            <v-edit-dialog
-                :return-value.sync="props.item.definition"
-                large
-                persistent
-                @save="save"
-                @cancel="cancel"
-                @open="open"
-                @close="close"
-            >
-              <div>{{ props.item.definition }}</div>
-              <template v-slot:input>
-                <div class="mt-4 title">
-                  Update Iron
-                </div>
-                <v-text-field
-                    v-model="props.item.definition"
-                    :rules="[max25chars]"
-                    label="Edit"
-                    single-line
-                    counter
-                    autofocus
-                ></v-text-field>
-              </template>
-            </v-edit-dialog>
-          </template>
-        </v-data-table>
+      <v-stepper-content step="5">
         <v-row>
           <v-col cols="12" sm="12">
             <v-data-table
@@ -798,7 +932,7 @@
         </v-btn>
       </v-stepper-content>
 
-      <v-stepper-content step="5">
+      <v-stepper-content step="6">
         <v-row>
           <v-data-table
               :items="sponsorRoles"
@@ -1117,7 +1251,7 @@
         </v-btn>
       </v-stepper-content>
 
-      <v-stepper-content step="6">
+      <v-stepper-content step="7">
         <v-row>
           <v-col cols="12" sm="12">
             <v-alert
@@ -1192,7 +1326,68 @@
 
       </v-stepper-content>
 
-      <v-stepper-content step="7">
+      <v-stepper-content step="8">
+        <v-container>
+          Assigner un des questionnaires selctionné ou deux (ide && lea 360 ou idea && lea) par cohort (ou trainee)
+          <br/>Si lea 360 on peux ajouter un ou plusieurs observers :
+          <br/>Email
+          <br/>Prénom
+          <br/>Nom
+          <br/>Language
+          <br/>Participant Type
+          <br/>-Boss
+          <br/>-Peer
+          <br/>-Direct report
+        </v-container>
+        <v-btn
+            color="primary"
+            @click="e1 = 1"
+        >
+          Continue
+        </v-btn>
+      </v-stepper-content>
+      <v-stepper-content step="9">
+        <v-container>
+          <v-row class="pa-5">
+            <v-col
+                cols="12"
+                sm="6"
+                md="6"
+            >
+              <v-btn>Add Event</v-btn>
+              A la creation spécifier si event est optional ou mandatory
+              <v-select
+                  v-model="value"
+                  :items="items"
+                  attach
+                  chips
+                  label="Cohorts"
+                  multiple
+              ></v-select>
+              Nombre d'event a choisir<br/>
+              Type event a la creation : Conference, Workshop...
+            </v-col>
+            <v-col
+                cols="12"
+                sm="6"
+                md="6"
+            >
+              <v-date-picker
+                  v-model="date2"
+                  :event-color="date => date[9] % 2 ? 'red' : 'yellow'"
+                  :events="functionEvents"
+              ></v-date-picker>
+            </v-col>
+          </v-row>
+        </v-container>
+        <v-btn
+            color="primary"
+            @click="e1 = 1"
+        >
+          Continue
+        </v-btn>
+      </v-stepper-content>
+      <v-stepper-content step="10">
         <v-container>
           <v-row>
             <v-switch
@@ -1267,48 +1462,8 @@
         </v-btn>
       </v-stepper-content>
 
-      <v-stepper-content step="8">
+      <v-stepper-content step="11">
         <v-container>
-          <v-row>
-            <v-col cols="6">
-              <v-text-field
-                  v-model="startDate"
-                  label="Project Start date"
-                  prepend-icon="mdi-calendar"
-                  readonly
-              ></v-text-field>
-            </v-col>
-            <v-col cols="6">
-              <v-text-field
-                  v-model="startDate"
-                  label="End date"
-                  prepend-icon="mdi-calendar"
-                  readonly
-              ></v-text-field>
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-col cols="6">
-              Milestone date :
-            </v-col>
-            <v-col cols="6">
-              <v-text-field
-                  v-model="startDate"
-                  label="Milestone1"
-                  prepend-icon="mdi-calendar"
-                  readonly
-              ></v-text-field>
-            </v-col>
-            <v-col cols="6"></v-col>
-            <v-col cols="6">
-              <v-text-field
-                  v-model="startDate"
-                  label="Milestone2"
-                  prepend-icon="mdi-calendar"
-                  readonly
-              ></v-text-field>
-            </v-col>
-          </v-row>
           <v-row>
             1 date du project + milestones,
             <br/>
@@ -1346,9 +1501,26 @@ export default {
         chosen: false
       }
     ],
+    events: [
+      {
+        description: 'Kick off',
+        objectif: 'Presentation of the program by sponsor of the project (Objectives, Learning journey, Pedagogical approach, Timeline, role of the different stakeholders, confidentiality…)',
+        chosen: false
+      },
+      {
+        description: 'HR Manager',
+        objectives: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, se',
+        chosen: false
+      }
+    ],
     headerSponsorRoles: [
       {text: 'Role', align: 'start', value: 'role'},
       {text: 'Definition', align: 'start', value: 'definition'},
+      {text: '', value: 'chosen'}
+    ],
+    eventsHeader: [
+      {text: 'Description', align: 'start', value: 'description'},
+      {text: 'Objectifs', align: 'start', value: 'objectif'},
       {text: '', value: 'chosen'}
     ],
     startDate: new Date().toISOString().substr(0, 10),
@@ -1363,6 +1535,10 @@ export default {
     expanded: [],
     e1: 1,
     items: ["foo", "bar", "fizz", "buzz"],
+    durations: ["30", "45", "60", "90"],
+    frequencies: ["To be defined by the trainee", "Once a week", "Once every two weeks", "Once a month", "Once every 2 months"],
+    questionnaires: ["Individual Directions Inventory (IDI)", "Leadership Effectiveness Analysis (LEA)"],
+    eventTypes: ["Workshop", "Kick off", "Team coaching", "Conference"],
     dates: ['2019-09-10', '2019-09-20'],
     dialogCreateTrainee: false,
     dialogCreateSponsor: false,

@@ -9,6 +9,8 @@ import Diary from "@/views/Diary";
 import ExternalSupport from "@/views/ExternalSupport";
 import Progress from "@/views/Progress";
 import ExternalSupportFeedBack from "@/views/ExternalSupportFeedBack";
+import HomeCoach from "@/views/coach/HomeCoach";
+import ChatCoach from "@/views/coach/ChatCoach";
 
 Vue.use(VueRouter)
 
@@ -57,6 +59,16 @@ const routes = [
         path: '/externalsupportfeedback',
         name: 'ExternalSupportFeedback',
         component: ExternalSupportFeedBack
+    },
+    {
+        path: '/homecoach',
+        name: 'Home Coach',
+        component: HomeCoach
+    },
+    {
+        path: '/chatcoach',
+        name: 'Chat Coach',
+        component: ChatCoach
     }
 ]
 

@@ -30,9 +30,6 @@
                   <th class="text-left">
                     Event
                   </th>
-                  <th class="text-left">
-                    Psycometric
-                  </th>
                 </tr>
                 </thead>
                 <tbody>
@@ -42,7 +39,6 @@
                 >
                   <td>{{ item.name }}</td>
                   <td>{{ item.description }}</td>
-                  <td>{{ item.strategy }}</td>
                   <td>{{ item.strategy }}</td>
                   <td>{{ item.strategy }}</td>
                 </tr>

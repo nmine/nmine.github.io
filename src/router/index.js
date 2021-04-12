@@ -11,6 +11,10 @@ import Progress from "@/views/Progress";
 import ExternalSupportFeedBack from "@/views/ExternalSupportFeedBack";
 import HomeCoach from "@/views/coach/HomeCoach";
 import ChatCoach from "@/views/coach/ChatCoach";
+import ProfileCoach from "@/views/coach/ProfileCoach";
+import CalendarCoach from "@/views/coach/CalendarCoach";
+import RessourcesCoach from "@/views/coach/RessourcesCoach";
+import Reporting from "@/views/Reporting";
 
 Vue.use(VueRouter)
 
@@ -69,6 +73,26 @@ const routes = [
         path: '/chatcoach',
         name: 'Chat Coach',
         component: ChatCoach
+    },
+    {
+        path: '/profilecoach',
+        name: 'Profile Coach',
+        component: ProfileCoach
+    },
+    {
+        path: '/calendarcpach',
+        name: 'Calendar Coach',
+        component: CalendarCoach
+    },
+    {
+        path: '/ressourcescoach',
+        name: 'Ressources Coach',
+        component: RessourcesCoach
+    },
+    {
+        path: '/reporting',
+        name: 'Reporting',
+        component: Reporting
     }
 ]
 

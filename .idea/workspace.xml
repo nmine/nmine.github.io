@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a352a796-daf2-46f8-bbec-9139837b2eee" name="Default Changelist" comment="Add documentation (features file)">
-      <change afterPath="$PROJECT_DIR$/documentation/basket.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/coach.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/sponsor.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/trainee.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/validation.participant.feature" afterDir="false" />
+    <list default="true" id="a352a796-daf2-46f8-bbec-9139837b2eee" name="Default Changelist" comment="Folowing 25/03 meeting">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_02_2021,_10_42_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_02_2021__10_42__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/catalogue.feature" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/catalogue.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +13,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -41,7 +38,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/documentation" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -52,11 +49,15 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Cucumber" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/documentation" />
       <recent name="$PROJECT_DIR$/src/views" />
+      <recent name="$PROJECT_DIR$/src/views/coach" />
+      <recent name="$PROJECT_DIR$/src/core" />
+      <recent name="$PROJECT_DIR$/documentation" />
       <recent name="$PROJECT_DIR$/src/components/creationProject" />
     </key>
   </component>
@@ -87,7 +88,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -100,6 +101,22 @@
       <updated>1608801934116</updated>
       <workItem from="1610114197015" duration="18051000" />
       <workItem from="1610553220553" duration="21517000" />
+      <workItem from="1613296966650" duration="122000" />
+      <workItem from="1613394327555" duration="580000" />
+      <workItem from="1613396023512" duration="1466000" />
+      <workItem from="1613596935325" duration="4494000" />
+      <workItem from="1615717198640" duration="1216000" />
+      <workItem from="1615839396072" duration="2673000" />
+      <workItem from="1615889240948" duration="746000" />
+      <workItem from="1615895414277" duration="7071000" />
+      <workItem from="1615986364165" duration="571000" />
+      <workItem from="1615994446761" duration="681000" />
+      <workItem from="1616319781178" duration="2499000" />
+      <workItem from="1616618927023" duration="671000" />
+      <workItem from="1616665381773" duration="1602000" />
+      <workItem from="1616837233185" duration="1422000" />
+      <workItem from="1617314187690" duration="11447000" />
+      <workItem from="1618221526079" duration="1104000" />
     </task>
     <task id="LOCAL-00001" summary="catalogue">
       <created>1610116484561</created>
@@ -283,11 +300,126 @@
       <option name="project" value="LOCAL" />
       <updated>1613058566035</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Add documentation (features file)">
+      <created>1613296984383</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1613296984383</updated>
+    </task>
+    <task id="LOCAL-00028" summary="cohorts in trainee">
+      <created>1615717577527</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1615717577527</updated>
+    </task>
+    <task id="LOCAL-00029" summary="cohorts in trainee">
+      <created>1615839699557</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1615839699557</updated>
+    </task>
+    <task id="LOCAL-00030" summary="cohorts in trainee">
+      <created>1615839808938</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1615839808938</updated>
+    </task>
+    <task id="LOCAL-00031" summary="cohorts in trainee">
+      <created>1615842237542</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1615842237542</updated>
+    </task>
+    <task id="LOCAL-00032" summary="add external and diary menu">
+      <created>1615889572739</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1615889572739</updated>
+    </task>
+    <task id="LOCAL-00033" summary="objectif and extarnal support">
+      <created>1615896723864</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1615896723864</updated>
+    </task>
+    <task id="LOCAL-00034" summary="objectif and extarnal support">
+      <created>1615907611023</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1615907611023</updated>
+    </task>
+    <task id="LOCAL-00035" summary="objectif and extarnal support">
+      <created>1615909193301</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1615909193301</updated>
+    </task>
+    <task id="LOCAL-00036" summary="objectif and extarnal support">
+      <created>1616618949795</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1616618949795</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Progress, Diary">
+      <created>1616666108104</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1616666108104</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Progress, Diary">
+      <created>1616667261211</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1616667261211</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Folowing 25/03 meeting">
+      <created>1617355675807</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1617355675807</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Folowing 25/03 meeting">
+      <created>1617961534921</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1617961534921</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Folowing 25/03 meeting">
+      <created>1618215461221</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1618215461222</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -320,7 +452,13 @@
     <MESSAGE value="Create project stepper , validation participants &#10;&#10;Add &#10;- alert with message &#10;- color row table&#10;&#10;Update Vuetify version" />
     <MESSAGE value="Create project stepper , overview project&#10;&#10;Add &#10;- overview project&#10;&#10;Update Vuetify version" />
     <MESSAGE value="Add documentation (features file)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add documentation (features file)" />
+    <MESSAGE value="Add documentation (features" />
+    <MESSAGE value="cohorts in trainee" />
+    <MESSAGE value="add external and diary menu" />
+    <MESSAGE value="objectif and extarnal support" />
+    <MESSAGE value="Progress, Diary" />
+    <MESSAGE value="Folowing 25/03 meeting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Folowing 25/03 meeting" />
   </component>
   <component name="masterDetails">
     <states>
